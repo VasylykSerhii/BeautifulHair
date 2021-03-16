@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Menu from 'components/Menu'
@@ -12,7 +12,6 @@ function Default({ title, children }): JSX.Element {
     <div>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content={url} />
       </Head>
       <Menu />

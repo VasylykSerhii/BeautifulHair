@@ -5,19 +5,19 @@ import { scrollDirection } from "constants/index";
 import { TrackVertical, ThumbVertical } from './styled-components'
 import { useScrollBarDara } from 'hooks'
 
+const { SCROLL_DIRECTION_UP, SCROLL_DIRECTION_DOWN } = scrollDirection;
+
+const trackV = ({ style, ...props }) => (
+  <TrackVertical style={style} {...props} />
+);
+
+const thumbV = ({ style, ...props }) => (
+  <ThumbVertical style={{ ...style }} {...props} />
+);
+
 const CustomScroll = ({ children }) => {
-  const { SCROLL_DIRECTION_UP, SCROLL_DIRECTION_DOWN } = scrollDirection;
   const [top, setTop] = useState(0);
   const { setScrollDir, setOffsetTop} = useScrollBarDara()
-  
-  const trackV = ({ style, ...props }) => (
-    <TrackVertical style={style} {...props} />
-  );
-
-  const thumbV = ({ style, ...props }) => (
-    <ThumbVertical style={{ ...style }} {...props} />
-  );
-
 
   const handleUpdate = useCallback(
     (e) => {
