@@ -1,11 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const MenuPosition = styled.div`
+interface IProps {
+  menuHide?: boolean;
+  bgDark?: boolean;
+}
+
+export const MenuPosition = styled.div<IProps>`
   position: fixed;
-  top: ${(props) => props.menuHide 
-    ? "-88px"
-    : 0
-  };
+  top: ${(props) => (props.menuHide ? "-88px" : 0)};
   left: 0;
   width: 100%;
   z-index: 999;
@@ -13,10 +15,8 @@ export const MenuPosition = styled.div`
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
-  background-color: ${(props) => props.bgDark 
-    ? props.theme.colors.menuBg
-    : 'transparent'
-  };
+  background-color: ${(props) =>
+    props.bgDark ? props.theme.colors.menuBg : "transparent"};
 `;
 
 export const MenuWrap = styled.div`
@@ -41,14 +41,13 @@ export const LogoDesc = styled.span`
   display: inline-block;
 `;
 
-
 export const Span = styled.span``;
 
 export const ItemsWrap = styled.nav`
   display: flex;
 `;
 
-export const Item = styled.a`
+export const Item = styled.a<{ active?: boolean }>`
   font-size: 14px;
   position: relative;
   color: ${(props) =>
@@ -61,7 +60,7 @@ export const Item = styled.a`
     left: 0;
     top: calc(100% + 5px);
     height: 2px;
-    width: ${props => props.active ? '50%' : 0};
+    width: ${(props) => (props.active ? "50%" : 0)};
     background-color: $main;
     transition: $trns;
   }
