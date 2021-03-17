@@ -1,23 +1,29 @@
 import React from "react";
 import NextLink from "next/link";
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
 import { scrollDirection } from "constants/index";
 import {
-  MenuPosition, MenuWrap, TextLogo, LogoDesc, ItemsWrap, Item, Span
+  MenuPosition,
+  MenuWrap,
+  TextLogo,
+  LogoDesc,
+  ItemsWrap,
+  Item,
+  Span,
 } from "./styled-components";
 
 const Menu = (): JSX.Element => {
-  const {offsetTop, scrollDir} = useSelector(state => state.hooks)
+  const { offsetTop, scrollDir } = useSelector((state) => state.hooks);
   const { SCROLL_DIRECTION_DOWN } = scrollDirection;
 
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
-    ...(scrollDir === SCROLL_DIRECTION_DOWN ? { menuHide: true } : null)
-  }
+    ...(scrollDir === SCROLL_DIRECTION_DOWN ? { menuHide: true } : null),
+  };
 
   return (
-    <MenuPosition {...settingMenu} >
+    <MenuPosition {...settingMenu}>
       <MenuWrap>
         <NextLink href="/">
           <a>
@@ -31,15 +37,11 @@ const Menu = (): JSX.Element => {
           <Item href="#" active>
             Головна
           </Item>
-          <Item href="#">
-            Про мене
-          </Item>
-          <Item href="#">
-            Мої роботи
-          </Item>
+          <Item href="#">Про мене</Item>
+          <Item href="#">Мої роботи</Item>
         </ItemsWrap>
       </MenuWrap>
-    </MenuPosition >
+    </MenuPosition>
   );
 };
 

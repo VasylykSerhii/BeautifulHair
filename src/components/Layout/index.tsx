@@ -1,10 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Menu from 'components/Menu'
-import CustomScroll from 'components/Layout/CustomScroll'
+import Menu from "components/Menu";
+import CustomScroll from "components/Layout/CustomScroll";
 
-function Default({ title, children }): JSX.Element {
+interface IProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+function Default({ title, children }: IProps): JSX.Element {
   const router = useRouter();
   const url = router && router.pathname;
 
@@ -16,13 +21,11 @@ function Default({ title, children }): JSX.Element {
       </Head>
       <Menu />
       <main>
-        <CustomScroll >
-          {children}
-        </CustomScroll>
+        <CustomScroll>{children}</CustomScroll>
       </main>
       {/* <Footer/> */}
     </div>
   );
 }
 
-export default Default
+export default Default;

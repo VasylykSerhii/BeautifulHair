@@ -2,8 +2,8 @@ import React, { useState, useMemo, useCallback } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 
 import { scrollDirection } from "constants/index";
-import { TrackVertical, ThumbVertical } from './styled-components'
-import { useScrollBarDara } from 'hooks'
+import { useScrollBarDara } from "hooks";
+import { TrackVertical, ThumbVertical } from "./styled-components";
 
 const { SCROLL_DIRECTION_UP, SCROLL_DIRECTION_DOWN } = scrollDirection;
 
@@ -15,10 +15,13 @@ const thumbV = ({ style, ...props }) => (
   <ThumbVertical style={{ ...style }} {...props} />
 );
 
-const CustomScroll = ({ children }) => {
-  const [top, setTop] = useState(0);
-  const { setScrollDir, setOffsetTop} = useScrollBarDara()
+interface IProps {
+  children: React.ReactNode;
+}
 
+const CustomScroll = ({ children }: IProps): JSX.Element => {
+  const [top, setTop] = useState(0);
+  const { setScrollDir, setOffsetTop } = useScrollBarDara();
   const handleUpdate = useCallback(
     (e) => {
       setOffsetTop(e.scrollTop);
@@ -32,7 +35,7 @@ const CustomScroll = ({ children }) => {
       );
       setTop(e.scrollTop);
     },
-    [top]
+    [top, setOffsetTop, setScrollDir]
   );
 
   const sProps = useMemo(
