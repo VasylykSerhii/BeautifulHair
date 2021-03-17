@@ -1,17 +1,21 @@
-import { AppProps } from 'next/app'
+import { AppProps } from "next/app";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Provider } from "react-redux";
 import store from "redux/store";
-import reset from 'styled-reset'
+import reset from "styled-reset";
 
 import { themes } from "constants/index";
 
-const GlobalStyle = createGlobalStyle`
+type Props = {
+  theme: typeof themes.defaultTheme;
+};
+
+const GlobalStyle = createGlobalStyle<Props>`
   ${reset};
 
   body{
-    background-color: ${(props) => props.theme.colors.bodyBg};
-    color: ${(props) => props.theme.colors.gray};
+    background-color: ${({ theme }) => theme.colors.bodyBg};
+    color: ${({ theme }) => theme.colors.gray};
     min-height: 100vh;
     min-width: 100vw;
   }
@@ -25,13 +29,11 @@ const GlobalStyle = createGlobalStyle`
 
   a{
     text-decoration: none;
-    color: ${(props) => props.theme.colors.gray}
+    color: ${({ theme }) => theme.colors.gray}
   }
-`
+`;
 
-function App({ Component, pageProps }: AppProps) {
-
-
+function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <Provider store={store}>
       <ThemeProvider theme={themes.defaultTheme}>
@@ -39,7 +41,7 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ThemeProvider>
     </Provider>
-  )
+  );
 }
 
-export default App
+export default App;
