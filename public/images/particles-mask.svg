@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1919px" height="970px" viewBox="0 0 1919 970" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>home screen copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="970"></rect>
+        <path d="M478.426189,462.434492 L-125.586505,1410.36628 C638.34633,1901.12877 1452.67966,1905.15151 2317.4135,1422.43449 L1618.4611,1046.57789 L478.426189,462.434492 Z" id="path-3"></path>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#FE9A8B" offset="0%"></stop>
+            <stop stop-color="#FD868C" offset="40.8502073%"></stop>
+            <stop stop-color="#F9748F" offset="73.1505102%"></stop>
+            <stop stop-color="#F78CA0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-6">
+            <stop stop-color="#FE9A8B" offset="0%"></stop>
+            <stop stop-color="#FD868C" offset="40.8502073%"></stop>
+            <stop stop-color="#F9748F" offset="73.1505102%"></stop>
+            <stop stop-color="#F78CA0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Devima-Solutions_v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-screen-copy-3">
+            <g id="Fill-5-Copy-2" transform="translate(0.000000, 0.002783)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" opacity="0" xlink:href="#path-1"></use>
+                <g id="Fill-5" mask="url(#mask-2)">
+                    <g transform="translate(-226.000000, -1014.476809)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Mask-Copy-9" stroke="none" fill="#000000" fill-rule="evenodd" transform="translate(1095.913495, 1121.957315) rotate(-30.000000) translate(-1095.913495, -1121.957315) " xlink:href="#path-3"></use>
+                        <path d="M1276.46166,1310.43636 C1262.29859,1308.43327 1257.89791,1297.39361 1266.70226,1285.95366 L1305.55471,1235.37182 C1314.32012,1223.94782 1328.78739,1205.1963 1337.54507,1193.79083 L1376.37928,1143.20109 C1385.19416,1131.78756 1396.78531,1133.40001 1402.16509,1146.89587 L1469.20178,1315.06587 C1474.59735,1328.60134 1467.38055,1337.96252 1453.19643,1335.90661 L1390.60065,1326.88744 C1376.48424,1324.84988 1353.22613,1321.54849 1339.07569,1319.46342 L1276.46166,1310.43636 Z" id="Fill-5-Copy-13" stroke="none" fill="url(#linearGradient-5)" fill-rule="evenodd" style="mix-blend-mode: color-burn;" opacity="0.125849185" mask="url(#mask-4)" transform="translate(1366.577754, 1235.895709) rotate(-60.000000) translate(-1366.577754, -1235.895709) "></path>
+                        <path d="M1366.48736,1172.85452 C1358.32765,1171.70912 1355.79544,1165.37446 1360.87167,1158.80613 L1383.27247,1129.76417 C1388.32626,1123.205 1396.6675,1112.43865 1401.71683,1105.89011 L1424.10712,1076.84363 C1429.18941,1070.29045 1435.86738,1071.21241 1438.96297,1078.95646 L1477.53672,1175.4539 C1480.6414,1183.22067 1476.48049,1188.59547 1468.30866,1187.41977 L1432.24567,1182.26213 C1424.11286,1181.09694 1410.71327,1179.20913 1402.56086,1178.01668 L1366.48736,1172.85452 Z" id="Fill-5-Copy-14" stroke="none" fill="url(#linearGradient-6)" fill-rule="evenodd" style="mix-blend-mode: color-burn;" opacity="0.125849185" mask="url(#mask-4)" transform="translate(1418.409391, 1130.029732) rotate(-195.000000) translate(-1418.409391, -1130.029732) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

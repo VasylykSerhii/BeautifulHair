@@ -6,12 +6,12 @@ const defaultTheme = {
     gray: "#747474",
     main: "#feb633",
 
-    //backgroun color
+    // backgroun color
     bodyBg: "#2b2c2c",
     bodyBgLight: " #303131",
     menuBg: "#252525",
   },
-  //transition
+  // transition
   trns: "all .3s ease",
 
   fonts: ["sans-serif", "Roboto"],
