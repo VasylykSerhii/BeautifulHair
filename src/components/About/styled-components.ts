@@ -26,6 +26,7 @@ export const Title = styled.h3`
   position: absolute;
   top: 45%;
   left: 30%;
+  color: ${({ theme }) => theme.colors.desc};
 
   &:before {
     position: absolute;
@@ -34,7 +35,7 @@ export const Title = styled.h3`
     left: 0;
     width: 100px;
     height: 4px;
-    background: $main;
+    background: ${({ theme }) => theme.colors.main};
     transition: all 0.3s;
   }
 `;
@@ -49,6 +50,5 @@ export const Desc = styled.p`
   line-height: 28px;
   margin-bottom: 30px;
   padding-right: 90px;
+  color: ${({ theme }) => theme.colors.desc};
 `;
-
-export const Button = styled.a``;

@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import { Button } from "assets/styles";
 import {
   AboutWrap,
   AboutContent,
@@ -6,12 +8,13 @@ import {
   Title,
   DescWrap,
   Desc,
-  Button,
 } from "./styled-components";
 
 interface IProps {
   desc: string[];
 }
+
+const { ButtomPrimaryReverse } = Button;
 
 function About({ desc }: IProps): JSX.Element {
   return (
@@ -24,7 +27,9 @@ function About({ desc }: IProps): JSX.Element {
           <DescWrap>
             {desc && desc.map((item) => <Desc key={item}>{item}</Desc>)}
 
-            <Button href="#">Мої роботи</Button>
+            <Link href="/">
+              <ButtomPrimaryReverse>Мої роботи</ButtomPrimaryReverse>
+            </Link>
           </DescWrap>
         )}
       </AboutContent>
