@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "assets/styles";
+import Link from "next/link";
 import {
   BannerWrap,
   ContentWrap,
@@ -30,7 +31,9 @@ export default function Banner({
           <Title>{title}</Title>
           <Description>{desc}</Description>
           <ButtonWrap>
-            <ButtomPrimary>{btnText}</ButtomPrimary>
+            <Link href="/">
+              <ButtomPrimary isBig>{btnText}</ButtomPrimary>
+            </Link>
           </ButtonWrap>
         </Content>
         <Img src={img} alt="person" />
