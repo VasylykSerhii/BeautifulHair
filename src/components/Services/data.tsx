@@ -1,6 +1,13 @@
+import {
+  HairExtension,
+  HairDye,
+  HairIron,
+  HairStraightener,
+} from "assets/icons";
+
 export const servicesData = [
   {
-    icon: "",
+    icon: <HairExtension size={50} color="#fff" />,
     title: "Холодне відновлення",
     desc:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
@@ -11,7 +18,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
-    icon: "",
+    icon: <HairDye size={50} color="#fff" />,
     title: "Ботокс",
     desc:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
@@ -22,7 +29,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
-    icon: "",
+    icon: <HairIron size={50} color="#fff" />,
     title: "Кератин",
     desc:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
@@ -33,7 +40,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
-    icon: "",
+    icon: <HairStraightener size={50} color="#fff" />,
     title: "Нанопластика",
     desc:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",

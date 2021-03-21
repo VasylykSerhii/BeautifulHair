@@ -1,16 +1,15 @@
-import { HairExtension } from "assets/icons";
 import React from "react";
 import {
   Content,
   Wrapper,
   Title,
   Description,
-  IconHairExtension,
+  IconWrap,
 } from "./styled-components";
 
 interface IProps {
   data: {
-    icon: string;
+    icon: React.ReactNode;
     title: string;
     desc: string;
     colors: {
@@ -25,7 +24,7 @@ function ServicesCard({ data }: IProps): JSX.Element {
   return (
     <Wrapper colors={data.colors} image={data.images}>
       <Content>
-        <IconHairExtension size={50} color="#fff" />
+        <IconWrap>{data.icon}</IconWrap>
         <Title>{data.title}</Title>
         <Description>{data.desc}</Description>
       </Content>
