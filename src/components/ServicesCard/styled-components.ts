@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HairExtension } from "assets/icons";
+import { device } from "assets/styles";
 
 interface IPropsWrap {
   colors: {
@@ -34,6 +34,10 @@ export const Wrapper = styled.div<IPropsWrap>`
       ${({ colors }) => colors.to} 100%
     );
   }
+
+  @media ${device.tablet} {
+    padding: 40px;
+  }
 `;
 
 export const Content = styled.div`
@@ -49,13 +53,19 @@ export const Title = styled.h4`
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 15px;
   font-weight: 600;
+  line-height: 1.2;
+
+  @media ${device.laptop} {
+    font-size: 24px;
+  }
 `;
 
 export const Description = styled.p`
   font-size: 16px;
   color: ${({ theme }) => theme.colors.white};
+  line-height: 1.5;
 `;
 
-export const IconHairExtension = styled(HairExtension)`
+export const IconWrap = styled.div`
   margin-bottom: 20px;
 `;

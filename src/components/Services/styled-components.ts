@@ -49,4 +49,8 @@ export const Content = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   margin-top: 80px;
+
+  @media ${device.mobileL} {
+    grid-template-columns: 1fr;
+  }
 `;
