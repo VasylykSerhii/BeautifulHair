@@ -3,19 +3,21 @@ import NextLink from "next/link";
 import { useSelector } from "react-redux";
 
 import { scrollDirection } from "constants/index";
+import { useMediaQuery } from "hooks/useMediaQuery";
+import MenuDesk from "./Desktop";
+import MobileMenu from "./Mobile";
 import {
   MenuPosition,
   MenuWrap,
   TextLogo,
   LogoDesc,
-  ItemsWrap,
-  Item,
   Span,
 } from "./styled-components";
 
 const Menu = (): JSX.Element => {
   const { offsetTop, scrollDir } = useSelector((state) => state.hooks);
   const { SCROLL_DIRECTION_DOWN } = scrollDirection;
+  const isMobile = useMediaQuery(600);
 
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
@@ -33,13 +35,8 @@ const Menu = (): JSX.Element => {
             </TextLogo>
           </a>
         </NextLink>
-        <ItemsWrap>
-          <Item href="#" active>
-            Головна
-          </Item>
-          <Item href="#">Про мене</Item>
-          <Item href="#">Мої роботи</Item>
-        </ItemsWrap>
+
+        {isMobile ? <MobileMenu /> : <MenuDesk />}
       </MenuWrap>
     </MenuPosition>
   );
