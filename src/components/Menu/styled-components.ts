@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import { device } from "assets/styles";
+import styled from "styled-components";
 
 interface IProps {
   menuHide?: boolean;
@@ -17,6 +18,10 @@ export const MenuPosition = styled.div<IProps>`
   transition: all 0.3s ease;
   background-color: ${(props) =>
     props.bgDark ? props.theme.colors.menuBg : "transparent"};
+
+  @media ${device.mobileL} {
+    height: 60px;
+  }
 `;
 
 export const MenuWrap = styled.div`
@@ -26,6 +31,10 @@ export const MenuWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${device.mobileL} {
+    max-width: calc(100% - 30px);
+  }
 `;
 
 export const TextLogo = styled.h1`
@@ -33,39 +42,22 @@ export const TextLogo = styled.h1`
   font-size: 52px;
   line-height: 1;
   color: ${(props) => props.theme.colors.main};
+  position: relative;
+  z-index: 3000;
+
+  @media ${device.mobileL} {
+    font-size: 42px;
+  }
 `;
 
 export const LogoDesc = styled.span`
   font-size: 16px;
   max-width: 70px;
   display: inline-block;
+
+  @media ${device.mobileL} {
+    font-size: 14px;
+  }
 `;
 
 export const Span = styled.span``;
-
-export const ItemsWrap = styled.nav`
-  display: flex;
-`;
-
-export const Item = styled.a<{ active?: boolean }>`
-  font-size: 14px;
-  position: relative;
-  color: ${(props) =>
-    props.active ? props.theme.colors.main : props.theme.colors.white};
-  text-decoration: none;
-
-  &:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: calc(100% + 5px);
-    height: 2px;
-    width: ${(props) => (props.active ? "50%" : 0)};
-    background-color: $main;
-    transition: $trns;
-  }
-
-  &:not(:last-of-type) {
-    margin-right: 30px;
-  }
-`;
