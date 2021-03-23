@@ -10,7 +10,7 @@ import {
 
 function MobileMenu(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
-  const { offsetTop, scrollDir } = useSelector((state) => state.hooks);
+  const { offsetTop } = useSelector((state) => state.hooks);
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
   };

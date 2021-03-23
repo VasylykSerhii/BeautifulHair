@@ -52,9 +52,9 @@ export const ContentWrapper = styled.div<IProps>`
   background-color: ${(props) =>
     props.bgDark ? props.theme.colors.menuBg : props.theme.colors.bodyBg};
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
-  height: calc(100vh);
+  height: 100vh;
   width: 100vw;
   transform-origin: 100% 0;
   transition: 0.5s;
