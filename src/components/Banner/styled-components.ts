@@ -11,13 +11,12 @@ export const ContentWrap = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  min-height: 100vh;
-  width: 1200px;
-  max-width: calc(100% - 60px);
+  min-height: calc(100vh - 88px);
   margin: auto;
+  width: 100%;
 
   @media ${device.mobileL} {
-    max-width: calc(100% - 30px);
+    min-height: calc(100vh - 60px);
   }
 `;
 

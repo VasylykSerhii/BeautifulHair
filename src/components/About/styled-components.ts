@@ -3,12 +3,22 @@ import styled from "styled-components";
 
 export const AboutWrap = styled.div`
   padding: 120px 0;
-  background-color: ${({ theme }) => theme.colors.bodyBgLight};
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: ${({ theme }) => theme.colors.bodyBgLight};
+    width: 150vw;
+    height: 100%;
+    left: -50vw;
+    top: 0;
+    z-index: -1;
+  }
 `;
 
 export const AboutContent = styled.div`
-  width: 1200px;
-  max-width: calc(100% - 60px);
+  width: 100%;
   margin: auto;
   display: flex;
 
