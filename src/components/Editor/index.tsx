@@ -43,7 +43,7 @@ const EditorPost = ({
               const reader = new FileReader();
               reader.onload = function () {
                 const id = `blobid${new Date().getTime()}`;
-                const { blobCache } = tinyMCE.activeEditor.editorUpload;
+                const { blobCache } = tinymce.activeEditor.editorUpload;
                 const base64 = reader.result.split(",")[1];
                 const blobInfo = blobCache.create(id, file, base64);
                 blobCache.add(blobInfo);
