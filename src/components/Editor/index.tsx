@@ -1,6 +1,7 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
-// import tinymce from "tinymce";
+import tinymce from "tinymce";
+
 interface HTMLInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
 }
@@ -42,7 +43,7 @@ const EditorPost = ({
               const reader = new FileReader();
               reader.onload = function () {
                 const id = `blobid${new Date().getTime()}`;
-                const { blobCache } = tinymce.activeEditor.editorUpload;
+                const { blobCache } = tinyMCE.activeEditor.editorUpload;
                 const base64 = reader.result.split(",")[1];
                 const blobInfo = blobCache.create(id, file, base64);
                 blobCache.add(blobInfo);
