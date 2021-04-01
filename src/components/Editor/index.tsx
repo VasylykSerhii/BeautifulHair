@@ -1,6 +1,9 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 // import tinymce from "tinymce";
+interface HTMLInputEvent extends Event {
+  target: HTMLInputElement & EventTarget;
+}
 
 const EditorPost = ({
   onChange,
@@ -33,8 +36,8 @@ const EditorPost = ({
             const input = document.createElement("input");
             input.setAttribute("type", "file");
             input.setAttribute("accept", "image/*");
-            input.onchange = function (e) {
-              const file = e.target.files[0];
+            input.onchange = function (e?: HTMLInputEvent) {
+              const file: any = e.target.files[0];
 
               const reader = new FileReader();
               reader.onload = function () {
