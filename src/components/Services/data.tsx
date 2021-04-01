@@ -10,7 +10,7 @@ export const servicesData = [
     icon: <HairExtension size={50} color="#fff" />,
     title: "Холодне відновлення",
     desc:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
+      "Холодне молекулярне відновлення волосся направлене на поповнення в пошкодженому волоссі кератину.",
     colors: {
       from: "#24e2fe",
       to: "#237efd",
@@ -21,7 +21,7 @@ export const servicesData = [
     icon: <HairDye size={50} color="#fff" />,
     title: "Ботокс",
     desc:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
+      "Ботокс - це процедура спрямована на відновлення і оздоровлення пасм.",
     colors: {
       from: "#ffd324",
       to: "#fda323",
@@ -32,7 +32,7 @@ export const servicesData = [
     icon: <HairIron size={50} color="#fff" />,
     title: "Кератин",
     desc:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat",
+      "Кератин - це білок, який складається з величезної кількості різновидних амінокислот.",
     colors: {
       from: "#f82fa0",
       to: "#b43dff",

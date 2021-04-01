@@ -2,13 +2,8 @@ import styled from "styled-components";
 import { device } from "assets/styles";
 
 export const Wrapper = styled.div`
-  width: 1200px;
-  max-width: calc(100% - 60px);
+  width: 100%;
   margin: 120px auto;
-
-  @media ${device.mobileL} {
-    max-width: calc(100% - 30px);
-  }
 `;
 
 export const Title = styled.h3`
