@@ -15,4 +15,4 @@ export const ThumbVertical = styled.div`
   cursor: pointer;
   border-radius: inherit;
   background-color: ${(props) => props.theme.colors.main};
-`
+`;

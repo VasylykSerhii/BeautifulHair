@@ -2,10 +2,6 @@ import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 // import tinymce from "tinymce";
 
-interface HTMLInputEvent extends Event {
-  target: HTMLInputElement & EventTarget;
-}
-
 const EditorPost = ({
   onChange,
 }: {
@@ -33,21 +29,17 @@ const EditorPost = ({
             "undo redo | formatselect | bold italic strikethrough blockquote forecolor backcolor| \
             alignleft aligncenter alignright | \
             bullist numlist outdent indent | link image  insertfile ",
-          file_picker_callback(cb, value, meta) {
+          file_picker_callback(cb) {
             const input = document.createElement("input");
             input.setAttribute("type", "file");
             input.setAttribute("accept", "image/*");
-            input.onchange = function (e?: HTMLInputEvent) {
-              const file: any = e.target.files[0];
-
+            input.onchange = () => {
+              const file = input.files[0];
               const reader = new FileReader();
-              reader.onload = function () {
-                const id = `blobid${new Date().getTime()}`;
-                const { blobCache } = tinymce.activeEditor.editorUpload;
-                const base64 = (reader.result as string).split(",")[1];
-                const blobInfo = blobCache.create(id, file, base64);
-                blobCache.add(blobInfo);
-                cb(blobInfo.blobUri(), { title: file.name });
+              reader.onload = (e?: ProgressEvent<FileReader>) => {
+                cb(e.target.result, {
+                  alt: file.name,
+                });
               };
               reader.readAsDataURL(file);
             };
