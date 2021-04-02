@@ -14,21 +14,30 @@ const EditorPost = ({
     <div className="editor">
       <Editor
         initialValue="<p>Initial content</p>"
+        apiKey="ex866wuf9fx07ucxeh5xxr0f04o4uoboke19e7744rtchiis"
         init={{
-          apiKey: "ex866wuf9fx07ucxeh5xxr0f04o4uoboke19e7744rtchiis",
           height: 500,
           menubar: true,
           plugins: [
             "advlist image autolink lists link image",
             "charmap print preview anchor help",
-            "searchreplace visualblocks code",
+            "searchreplace visualblocks code emoticons",
             "insertdatetime media table paste wordcount",
           ],
+          emoticons_append: {
+            custom_mind_explode: {
+              keywords: ["brain", "mind", "explode", "blown"],
+              char: "🤯",
+            },
+          },
           toolbar:
             // eslint-disable-next-line no-multi-str
-            "undo redo | formatselect | bold italic strikethrough blockquote forecolor backcolor| \
+            "undo redo | \
+            formatselect | \
+            bold italic strikethrough blockquote forecolor backcolor emoticons| \
             alignleft aligncenter alignright | \
-            bullist numlist outdent indent | link image  insertfile ",
+            bullist numlist outdent indent | \
+            link image  insertfile'",
           file_picker_callback(cb) {
             const input = document.createElement("input");
             input.setAttribute("type", "file");
