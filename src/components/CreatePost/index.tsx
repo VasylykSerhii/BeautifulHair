@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import Editor from "components/Editor";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import ReactHtmlParser from "react-html-parser";
 
 const CreatePost = (): JSX.Element => {
   const [content, setcontent] = useState();
-
-  console.log(content);
 
   return (
     <div className="editor">
