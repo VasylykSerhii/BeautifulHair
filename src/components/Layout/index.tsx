@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Menu from "components/Menu";
 import CustomScroll from "components/Layout/CustomScroll";
-import { Main } from "./styled-components";
+import { Main, Container } from "./styled-components";
 
 interface IProps {
   title: string;
@@ -21,8 +21,11 @@ function Default({ title, children }: IProps): JSX.Element {
         <meta property="og:url" content={url} />
       </Head>
       <Menu />
+
       <CustomScroll>
-        <Main>{children}</Main>
+        <Main>
+          <Container>{children}</Container>
+        </Main>
       </CustomScroll>
       {/* <Footer/> */}
     </div>
