@@ -49,6 +49,10 @@ const CustomScroll = ({ children }: IProps): JSX.Element => {
       autoHide: true,
       autoHideTimeout: 1000,
       universal: true,
+      autoHeight: true,
+      autoHeightMin: "100vh",
+      autoHeightMax: "100vh",
+      hideTracksWhenNotNeeded: true,
       onUpdate: handleUpdate,
     }),
     [handleUpdate]
