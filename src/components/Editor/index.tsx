@@ -1,6 +1,5 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
-// import tinymce from "tinymce";
 
 const EditorPost = ({
   onChange,
@@ -13,7 +12,7 @@ const EditorPost = ({
   return (
     <div className="editor">
       <Editor
-        initialValue="<p>Initial content</p>"
+        initialValue=""
         apiKey="ex866wuf9fx07ucxeh5xxr0f04o4uoboke19e7744rtchiis"
         init={{
           height: 500,
