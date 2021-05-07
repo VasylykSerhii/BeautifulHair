@@ -4,9 +4,11 @@ import {
   HairIron,
   HairStraightener,
 } from "assets/icons";
+import { IServiceData } from "./interface";
 
 export const servicesData = [
   {
+    slug: "kholodne-vidnovlennya",
     icon: <HairExtension size={50} color="#fff" />,
     title: "Холодне відновлення",
     desc:
@@ -18,6 +20,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
+    slug: "botoks",
     icon: <HairDye size={50} color="#fff" />,
     title: "Ботокс",
     desc:
@@ -29,6 +32,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
+    slug: "keratyn",
     icon: <HairIron size={50} color="#fff" />,
     title: "Кератин",
     desc:
@@ -40,6 +44,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
   {
+    slug: "nanoplastyka",
     icon: <HairStraightener size={50} color="#fff" />,
     title: "Нанопластика",
     desc:
@@ -51,3 +56,7 @@ export const servicesData = [
     images: "/images/holodne.jpg",
   },
 ];
+
+export const serviceData = (slug: string | string[]): IServiceData => {
+  return servicesData.filter((el) => el.slug === slug)[0];
+};

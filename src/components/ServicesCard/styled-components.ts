@@ -8,7 +8,7 @@ interface IPropsWrap {
   };
   image: string;
 }
-export const Wrapper = styled.div<IPropsWrap>`
+export const Wrapper = styled.a<IPropsWrap>`
   position: relative;
   padding: 60px 80px;
   border-radius: 10px;
@@ -18,6 +18,7 @@ export const Wrapper = styled.div<IPropsWrap>`
   background-size: cover;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &:before {
     content: "";

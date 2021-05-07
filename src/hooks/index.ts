@@ -1,1 +1,1 @@
-export {default as useScrollBarDara} from "./useScrollBarDara"
+export { default as useScrollBarDara } from "./useScrollBarDara";
