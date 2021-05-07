@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import { IServiceData } from "components/Services/interface";
 import {
   Content,
   Wrapper,
@@ -8,27 +10,24 @@ import {
 } from "./styled-components";
 
 interface IProps {
-  data: {
-    icon: React.ReactNode;
-    title: string;
-    desc: string;
-    colors: {
-      from: string;
-      to: string;
-    };
-    images: string;
-  };
+  data: IServiceData;
 }
 
 function ServicesCard({ data }: IProps): JSX.Element {
   return (
-    <Wrapper colors={data.colors} image={data.images}>
-      <Content>
-        <IconWrap>{data.icon}</IconWrap>
-        <Title>{data.title}</Title>
-        <Description>{data.desc}</Description>
-      </Content>
-    </Wrapper>
+    <Link
+      href={`/services/${data.slug}`}
+      as={`/services/${data.slug}`}
+      passHref
+    >
+      <Wrapper colors={data.colors} image={data.images}>
+        <Content>
+          <IconWrap>{data.icon}</IconWrap>
+          <Title>{data.title}</Title>
+          <Description>{data.desc}</Description>
+        </Content>
+      </Wrapper>
+    </Link>
   );
 }
 
