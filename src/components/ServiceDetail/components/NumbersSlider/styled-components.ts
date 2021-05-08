@@ -88,6 +88,7 @@ export const Desc = styled.div`
 
   @media ${device.mobileL} {
     padding: 0 0 0 15px;
+    justify-content: flex-start;
     transform: translate(0, 0);
     opacity: 1;
     min-height: initial;

@@ -4,10 +4,10 @@ import { Wrapper, Title, Description } from "./styled-components";
 
 interface IProps {
   title: string;
-  desc: string;
+  desc?: string;
 }
 
-function Heading({ title, desc }: IProps): JSX.Element {
+function Heading({ title, desc = null }: IProps): JSX.Element {
   return (
     <Container>
       <Wrapper>
@@ -17,5 +17,7 @@ function Heading({ title, desc }: IProps): JSX.Element {
     </Container>
   );
 }
-
+Heading.defaultProps = {
+  desc: null,
+};
 export default Heading;
