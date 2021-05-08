@@ -42,4 +42,8 @@ export const Description = styled.p`
   margin-top: 35px;
   text-align: center;
   color: ${({ theme }) => theme.colors.desc};
+
+  @media ${device.mobileL} {
+    margin-top: 20px;
+  }
 `;

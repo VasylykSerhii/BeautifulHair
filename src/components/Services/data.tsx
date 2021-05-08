@@ -19,39 +19,36 @@ export const servicesData = [
     },
     images: "/images/holodne.jpg",
     numbers: {
-      title: "Заголовок",
+      title: "Послідовність",
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
       list: [
         {
-          title: "Meet and Greet",
+          title: "Миємо волосся",
           desc:
-            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+            "Очищаємо волосся та відкриваємо кутикулу волосини для покращення проникнення кератину.",
         },
         {
-          title: "Share your idea",
-          desc:
-            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+          title: "Перевіка ступені",
+          desc: "Перевіряємо волосся на в'язкість та міцність волосини.",
         },
         {
-          title: "Choose the technologies",
-          desc:
-            "Handle all aspects of vetting and choosing the right tech stack for future product",
+          title: "Визначення процедури",
+          desc: "Завдяки ступені пошкодження волосся підбераємо процедуру.",
         },
         {
-          title: "Design",
-          desc:
-            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+          title: "Підготовка",
+          desc: "Підготовляємо волосся до вибраної процеду.",
         },
         {
-          title: "Develop",
+          title: "Нанесення",
           desc:
-            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+            "Наносимо склад процедури витримуючу певний час за даною процедурою та чекаємо наступного етапу",
         },
         {
-          title: "Release and support",
+          title: "Випарювання",
           desc:
-            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+            "Випарюючи скрад волосина впитує всі компоненти, насичується і стає еластичнішою.",
         },
       ],
     },
@@ -68,39 +65,36 @@ export const servicesData = [
     },
     images: "/images/holodne.jpg",
     numbers: {
-      title: "Заголовок",
+      title: "Послідовність",
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
       list: [
         {
-          title: "Meet and Greet",
+          title: "Миємо волосся",
           desc:
-            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+            "Очищаємо волосся та відкриваємо кутикулу волосини для покращення проникнення кератину.",
         },
         {
-          title: "Share your idea",
-          desc:
-            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+          title: "Перевіка ступені",
+          desc: "Перевіряємо волосся на в'язкість та міцність волосини.",
         },
         {
-          title: "Choose the technologies",
-          desc:
-            "Handle all aspects of vetting and choosing the right tech stack for future product",
+          title: "Визначення процедури",
+          desc: "Завдяки ступені пошкодження волосся підбераємо процедуру.",
         },
         {
-          title: "Design",
-          desc:
-            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+          title: "Підготовка",
+          desc: "Підготовляємо волосся до вибраної процеду.",
         },
         {
-          title: "Develop",
+          title: "Нанесення",
           desc:
-            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+            "Наносимо склад процедури витримуючу певний час за даною процедурою та чекаємо наступного етапу",
         },
         {
-          title: "Release and support",
+          title: "Випарювання",
           desc:
-            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+            "Випарюючи скрад волосина впитує всі компоненти, насичується і стає еластичнішою.",
         },
       ],
     },
@@ -117,39 +111,36 @@ export const servicesData = [
     },
     images: "/images/holodne.jpg",
     numbers: {
-      title: "Заголовок",
+      title: "Послідовність",
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
       list: [
         {
-          title: "Meet and Greet",
+          title: "Миємо волосся",
           desc:
-            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+            "Очищаємо волосся та відкриваємо кутикулу волосини для покращення проникнення кератину.",
         },
         {
-          title: "Share your idea",
-          desc:
-            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+          title: "Перевіка ступені",
+          desc: "Перевіряємо волосся на в'язкість та міцність волосини.",
         },
         {
-          title: "Choose the technologies",
-          desc:
-            "Handle all aspects of vetting and choosing the right tech stack for future product",
+          title: "Визначення процедури",
+          desc: "Завдяки ступені пошкодження волосся підбераємо процедуру.",
         },
         {
-          title: "Design",
-          desc:
-            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+          title: "Підготовка",
+          desc: "Підготовляємо волосся до вибраної процеду.",
         },
         {
-          title: "Develop",
+          title: "Нанесення",
           desc:
-            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+            "Наносимо склад процедури витримуючу певний час за даною процедурою та чекаємо наступного етапу",
         },
         {
-          title: "Release and support",
+          title: "Випарювання",
           desc:
-            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+            "Випарюючи скрад волосина впитує всі компоненти, насичується і стає еластичнішою.",
         },
       ],
     },
@@ -166,39 +157,36 @@ export const servicesData = [
     },
     images: "/images/holodne.jpg",
     numbers: {
-      title: "Заголовок",
+      title: "Послідовність",
       desc:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
       list: [
         {
-          title: "Meet and Greet",
+          title: "Миємо волосся",
           desc:
-            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+            "Очищаємо волосся та відкриваємо кутикулу волосини для покращення проникнення кератину.",
         },
         {
-          title: "Share your idea",
-          desc:
-            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+          title: "Перевіка ступені",
+          desc: "Перевіряємо волосся на в'язкість та міцність волосини.",
         },
         {
-          title: "Choose the technologies",
-          desc:
-            "Handle all aspects of vetting and choosing the right tech stack for future product",
+          title: "Визначення процедури",
+          desc: "Завдяки ступені пошкодження волосся підбераємо процедуру.",
         },
         {
-          title: "Design",
-          desc:
-            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+          title: "Підготовка",
+          desc: "Підготовляємо волосся до вибраної процеду.",
         },
         {
-          title: "Develop",
+          title: "Нанесення",
           desc:
-            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+            "Наносимо склад процедури витримуючу певний час за даною процедурою та чекаємо наступного етапу",
         },
         {
-          title: "Release and support",
+          title: "Випарювання",
           desc:
-            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+            "Випарюючи скрад волосина впитує всі компоненти, насичується і стає еластичнішою.",
         },
       ],
     },
