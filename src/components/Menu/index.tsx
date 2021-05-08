@@ -12,6 +12,7 @@ import {
   TextLogo,
   LogoDesc,
   Span,
+  LinkLogo,
 } from "./styled-components";
 
 const Menu = (): JSX.Element => {
@@ -21,19 +22,21 @@ const Menu = (): JSX.Element => {
 
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
-    ...(scrollDir === SCROLL_DIRECTION_DOWN ? { menuHide: true } : null),
+    ...(offsetTop >= 100 && scrollDir === SCROLL_DIRECTION_DOWN
+      ? { menuHide: true }
+      : { menuHide: false }),
   };
 
   return (
     <MenuPosition {...settingMenu}>
       <MenuWrap>
-        <NextLink href="/">
-          <a>
+        <NextLink href="/" passHref>
+          <LinkLogo>
             <TextLogo>
               <Span>BH</Span>
               <LogoDesc>Beautiful Hair</LogoDesc>
             </TextLogo>
-          </a>
+          </LinkLogo>
         </NextLink>
 
         {isMobile ? <MobileMenu /> : <MenuDesk />}

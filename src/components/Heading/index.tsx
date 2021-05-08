@@ -1,3 +1,4 @@
+import { Container } from "@material-ui/core";
 import React from "react";
 import { Wrapper, Title, Description } from "./styled-components";
 
@@ -8,10 +9,12 @@ interface IProps {
 
 function Heading({ title, desc }: IProps): JSX.Element {
   return (
-    <Wrapper>
-      {title && <Title>{title}</Title>}
-      {desc && <Description>{desc}</Description>}
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        {title && <Title>{title}</Title>}
+        {desc && <Description>{desc}</Description>}
+      </Wrapper>
+    </Container>
   );
 }
 

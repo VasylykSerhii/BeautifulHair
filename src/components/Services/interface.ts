@@ -1,3 +1,7 @@
+export interface IServiceNumbers {
+  title: string;
+  desc: string;
+}
 export interface IServiceData {
   slug: string;
   icon: JSX.Element;
@@ -8,4 +12,9 @@ export interface IServiceData {
     to: string;
   };
   images: string;
+  numbers?: {
+    title: string;
+    desc: string;
+    list: IServiceNumbers[];
+  };
 }

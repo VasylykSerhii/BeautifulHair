@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "assets/styles";
+import { Container } from "@material-ui/core";
 import {
   AboutWrap,
   AboutContent,
@@ -19,20 +20,22 @@ const { ButtomPrimaryReverse } = Button;
 function About({ desc }: IProps): JSX.Element {
   return (
     <AboutWrap>
-      <AboutContent>
-        <TitleWrap>
-          <Title>Про мене</Title>
-        </TitleWrap>
-        {desc && (
-          <DescWrap>
-            {desc && desc.map((item) => <Desc key={item}>{item}</Desc>)}
+      <Container>
+        <AboutContent>
+          <TitleWrap>
+            <Title>Про мене</Title>
+          </TitleWrap>
+          {desc && (
+            <DescWrap>
+              {desc && desc.map((item) => <Desc key={item}>{item}</Desc>)}
 
-            <Link href="/">
-              <ButtomPrimaryReverse>Мої роботи</ButtomPrimaryReverse>
-            </Link>
-          </DescWrap>
-        )}
-      </AboutContent>
+              <Link href="/">
+                <ButtomPrimaryReverse>Мої роботи</ButtomPrimaryReverse>
+              </Link>
+            </DescWrap>
+          )}
+        </AboutContent>
+      </Container>
     </AboutWrap>
   );
 }

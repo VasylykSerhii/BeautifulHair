@@ -5,6 +5,18 @@ export const AboutWrap = styled.div`
   padding: 120px 0;
   position: relative;
 
+  @media ${device.laptop} {
+    padding: 100px 0;
+  }
+
+  @media ${device.tablet} {
+    padding: 80px 0;
+  }
+
+  @media ${device.mobileL} {
+    padding: 50px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;

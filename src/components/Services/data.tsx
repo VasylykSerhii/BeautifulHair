@@ -18,6 +18,43 @@ export const servicesData = [
       to: "#237efd",
     },
     images: "/images/holodne.jpg",
+    numbers: {
+      title: "Заголовок",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+      list: [
+        {
+          title: "Meet and Greet",
+          desc:
+            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+        },
+        {
+          title: "Share your idea",
+          desc:
+            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+        },
+        {
+          title: "Choose the technologies",
+          desc:
+            "Handle all aspects of vetting and choosing the right tech stack for future product",
+        },
+        {
+          title: "Design",
+          desc:
+            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+        },
+        {
+          title: "Develop",
+          desc:
+            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+        },
+        {
+          title: "Release and support",
+          desc:
+            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+        },
+      ],
+    },
   },
   {
     slug: "botoks",
@@ -30,6 +67,43 @@ export const servicesData = [
       to: "#fda323",
     },
     images: "/images/holodne.jpg",
+    numbers: {
+      title: "Заголовок",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+      list: [
+        {
+          title: "Meet and Greet",
+          desc:
+            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+        },
+        {
+          title: "Share your idea",
+          desc:
+            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+        },
+        {
+          title: "Choose the technologies",
+          desc:
+            "Handle all aspects of vetting and choosing the right tech stack for future product",
+        },
+        {
+          title: "Design",
+          desc:
+            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+        },
+        {
+          title: "Develop",
+          desc:
+            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+        },
+        {
+          title: "Release and support",
+          desc:
+            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+        },
+      ],
+    },
   },
   {
     slug: "keratyn",
@@ -42,6 +116,43 @@ export const servicesData = [
       to: "#b43dff",
     },
     images: "/images/holodne.jpg",
+    numbers: {
+      title: "Заголовок",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+      list: [
+        {
+          title: "Meet and Greet",
+          desc:
+            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+        },
+        {
+          title: "Share your idea",
+          desc:
+            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+        },
+        {
+          title: "Choose the technologies",
+          desc:
+            "Handle all aspects of vetting and choosing the right tech stack for future product",
+        },
+        {
+          title: "Design",
+          desc:
+            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+        },
+        {
+          title: "Develop",
+          desc:
+            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+        },
+        {
+          title: "Release and support",
+          desc:
+            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+        },
+      ],
+    },
   },
   {
     slug: "nanoplastyka",
@@ -54,9 +165,46 @@ export const servicesData = [
       to: "#03dc0d",
     },
     images: "/images/holodne.jpg",
+    numbers: {
+      title: "Заголовок",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+      list: [
+        {
+          title: "Meet and Greet",
+          desc:
+            "Reach our core team. Explore our philosophy and approach. Make the right choice",
+        },
+        {
+          title: "Share your idea",
+          desc:
+            "Tackle and study the target market and competitive landscape. Clarify all doubts and queries",
+        },
+        {
+          title: "Choose the technologies",
+          desc:
+            "Handle all aspects of vetting and choosing the right tech stack for future product",
+        },
+        {
+          title: "Design",
+          desc:
+            "Create amazing, user-friendly designs that are reinforced with high-quality code",
+        },
+        {
+          title: "Develop",
+          desc:
+            "Make your app go live thanks to the carefully chosen technologies and experienced developers",
+        },
+        {
+          title: "Release and support",
+          desc:
+            "Launch then support and maintain a product in order to constantly improve the product’s quality",
+        },
+      ],
+    },
   },
 ];
 
-export const serviceData = (slug: string | string[]): IServiceData => {
+export const serviceData = (slug: string): IServiceData => {
   return servicesData.filter((el) => el.slug === slug)[0];
 };

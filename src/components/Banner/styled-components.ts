@@ -5,6 +5,11 @@ export const BannerWrap = styled.div`
   background-color: ${(props) => props.theme.colors.bodyBg};
   overflow: hidden;
   position: relative;
+  margin-top: 88px;
+
+  @media ${device.mobileL} {
+    margin-top: 60px;
+  }
 `;
 
 export const ContentWrap = styled.div`
