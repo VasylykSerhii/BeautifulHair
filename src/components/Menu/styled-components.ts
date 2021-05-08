@@ -17,7 +17,7 @@ export const MenuPosition = styled.div<IProps>`
   align-items: center;
   transition: all 0.3s ease;
   background-color: ${(props) =>
-    props.bgDark ? props.theme.colors.menuBg : "transparent"};
+    props.bgDark ? props.theme.colors.menuBg : props.theme.colors.bodyBg};
 
   @media ${device.mobileL} {
     height: 60px;
@@ -36,7 +36,7 @@ export const MenuWrap = styled.div`
     max-width: calc(100% - 30px);
   }
 `;
-
+export const LinkLogo = styled.a``;
 export const TextLogo = styled.h1`
   font-family: "Dancing Script", cursive;
   font-size: 52px;

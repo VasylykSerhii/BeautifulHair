@@ -23,6 +23,14 @@ export const Title = styled.h3`
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media ${device.tablet} {
+    font-size: 40px;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 30px;
+  }
 `;
 
 export const Description = styled.p`

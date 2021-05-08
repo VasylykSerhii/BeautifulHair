@@ -1,6 +1,6 @@
 const defaultTheme = {
   colors: {
-    white: " #ffffff",
+    white: "#ffffff",
     title: "#cccccc",
     desc: "#9f9f9f",
     gray: "#747474",
@@ -10,6 +10,8 @@ const defaultTheme = {
     bodyBg: "#2b2c2c",
     bodyBgLight: " #303131",
     menuBg: "#252525",
+
+    border: "#5a5a5a",
   },
   // transition
   trns: "all .3s ease",

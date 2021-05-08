@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix --ext .js,jsx,ts,tsx src pages"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "@tinymce/tinymce-react": "^3.12.2",
     "@types/styled-components": "^5.1.9",
     "eslint": "^7.22.0",

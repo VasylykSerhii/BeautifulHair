@@ -3,12 +3,17 @@ import { serviceData } from "components/Services/data";
 import Layout from "components/Layout";
 import { GetServerSideProps } from "next";
 import { IServiceData } from "components/Services/interface";
+import ServiceDetail from "components/ServiceDetail";
 
 interface IProps {
   data: IServiceData;
 }
 export default function ServicesDetail({ data }: IProps): JSX.Element {
-  return <Layout title={`BH | ${data.title}`}>{data.title}</Layout>;
+  return (
+    <Layout title={`BH | ${data.title}`}>
+      <ServiceDetail data={data} />
+    </Layout>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps<IProps> = async (

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "assets/styles";
 import Link from "next/link";
+import { Container } from "@material-ui/core";
 import {
   BannerWrap,
   ContentWrap,
@@ -25,19 +26,21 @@ export default function Banner({
   btnText,
 }: IProps): JSX.Element {
   return (
-    <BannerWrap>
-      <ContentWrap>
-        <Content>
-          <Title>{title}</Title>
-          <Description>{desc}</Description>
-          <ButtonWrap>
-            <Link href="/">
-              <ButtomPrimary isBig>{btnText}</ButtomPrimary>
-            </Link>
-          </ButtonWrap>
-        </Content>
-        <Img src={img} alt="person" />
-      </ContentWrap>
-    </BannerWrap>
+    <Container>
+      <BannerWrap>
+        <ContentWrap>
+          <Content>
+            <Title>{title}</Title>
+            <Description>{desc}</Description>
+            <ButtonWrap>
+              <Link href="/">
+                <ButtomPrimary isBig>{btnText}</ButtomPrimary>
+              </Link>
+            </ButtonWrap>
+          </Content>
+          <Img src={img} alt="person" />
+        </ContentWrap>
+      </BannerWrap>
+    </Container>
   );
 }
