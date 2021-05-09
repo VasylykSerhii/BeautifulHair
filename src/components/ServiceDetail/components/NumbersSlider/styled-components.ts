@@ -104,7 +104,7 @@ export const Desc = styled.div`
 
 export const Num = styled.div`
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   color: #e8e8e8;
   font-weight: 700;
   font-size: 120px;

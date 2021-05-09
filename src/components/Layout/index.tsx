@@ -8,9 +8,10 @@ import { Main } from "./styled-components";
 interface IProps {
   title: string;
   children: React.ReactNode;
+  notOffsetTop?: boolean;
 }
 
-function Default({ title, children }: IProps): JSX.Element {
+function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
   const router = useRouter();
   const url = router && router.pathname;
 
@@ -23,11 +24,15 @@ function Default({ title, children }: IProps): JSX.Element {
       <Menu />
 
       <CustomScroll>
-        <Main>{children}</Main>
+        <Main notOffsetTop={notOffsetTop}>{children}</Main>
       </CustomScroll>
       {/* <Footer/> */}
     </div>
   );
 }
+
+Default.defaultProps = {
+  notOffsetTop: false,
+};
 
 export default Default;

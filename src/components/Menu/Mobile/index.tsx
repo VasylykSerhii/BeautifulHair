@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import CustomMobileLink from "../CustomMobileLink";
+import { menuItems } from "../menuItems";
 
 import {
   Humburger,
   WrapperMenu,
   Line,
+  Nav,
   ContentWrapper,
 } from "./styled-components";
+
+const animationDelay = 0.25;
+const animationStartOffset = 2;
 
 function MobileMenu(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +29,22 @@ function MobileMenu(): JSX.Element {
         <Line isOpen={isOpen} />
       </Humburger>
       <ContentWrapper isOpen={isOpen} {...settingMenu}>
-        <p>sdfasdf</p>
-        <p>sdfasdf</p>
-        <p>sdfasdf</p>
-        <p>sdfasdf</p>
-        <p>sdfasdf</p>
-        <p>sdfasdf</p>
+        <Nav>
+          {menuItems.map((el, idx) => (
+            <CustomMobileLink
+              href={el.href}
+              title={el.name}
+              key={el.name}
+              styleAnimation={idx % 2 ? "fadeRight" : "fadeLeft"}
+              animatedLink={isOpen}
+              style={{
+                animationDelay: `${
+                  (idx + animationStartOffset) * animationDelay
+                }s`,
+              }}
+            />
+          ))}
+        </Nav>
       </ContentWrapper>
     </WrapperMenu>
   );
