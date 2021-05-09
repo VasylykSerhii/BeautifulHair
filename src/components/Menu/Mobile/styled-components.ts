@@ -62,3 +62,11 @@ export const ContentWrapper = styled.div<IProps>`
   z-index: 2;
   clip-path: circle(${({ isOpen }) => (isOpen ? "140%" : 0)} at 96% 3%);
 `;
+
+export const Nav = styled.nav`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

@@ -13,15 +13,10 @@ export const Wrapper = styled.div<IPropsWrap>`
   background-image: url(${({ image }) => image});
   position: relative;
   width: 100%;
-  margin-top: 88px;
   height: 60vh;
   background-size: cover;
   background-position: center;
   padding: 60px;
-
-  @media ${device.mobileL} {
-    margin-top: 60px;
-  }
 
   &:before {
     content: "";
@@ -30,7 +25,7 @@ export const Wrapper = styled.div<IPropsWrap>`
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 0;
     background-image: linear-gradient(
       48deg,
