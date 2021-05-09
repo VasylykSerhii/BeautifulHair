@@ -23,6 +23,11 @@ const fadeRight = keyframes`
   }
 `;
 
+const animationStyles = {
+  fadeLeft,
+  fadeRight,
+};
+
 interface IItemProps {
   active?: boolean;
   animatedLink?: boolean;
@@ -38,24 +43,11 @@ export const Item = styled.a<IItemProps>`
   padding: 30px;
   transition: all 0.2s ease;
 
-  ${(props) =>
-    props.animatedLink &&
-    props.styleAnimation === "fadeLeft" &&
-    css`
-      animation-name: ${fadeLeft};
-    `};
-
-  ${(props) =>
-    props.animatedLink &&
-    props.styleAnimation === "fadeRight" &&
-    css`
-      animation-name: ${fadeRight};
-    `};
-
-  ${(props) =>
-    props.animatedLink &&
+  ${({ animatedLink, styleAnimation }) =>
+    animatedLink &&
     css`
       animation-fill-mode: both;
       animation-duration: 0.25s;
+      animation-name: ${animationStyles[styleAnimation]};
     `}
 `;
