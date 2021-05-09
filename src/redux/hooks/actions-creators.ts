@@ -4,9 +4,9 @@ import {
   SET_SCROLLDIR_ACTION,
   SET_OFFSETTOP_ACTION,
 } from "./actions-types";
-import { IChatState } from "./reducers";
+import { IHooksState } from "./reducers";
 
-export const setStateCreation = (payload: Partial<IChatState>) => {
+export const setStateCreation = (payload: Partial<IHooksState>) => {
   return {
     type: SET_STATE_HOOKS_ACTION,
     payload,
@@ -32,9 +32,9 @@ export const setOffsetTopCreation = (number) => {
   };
 };
 
-const chatActionCreators = {
+const hooksActionCreators = {
   setStateCreation,
   setLoadingCreation,
 };
 
-export default chatActionCreators;
+export default hooksActionCreators;
