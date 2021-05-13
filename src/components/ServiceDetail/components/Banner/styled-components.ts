@@ -18,6 +18,18 @@ export const Wrapper = styled.div<IPropsWrap>`
   background-position: center;
   padding: 60px;
 
+  @media ${device.laptop} {
+    padding: 50px;
+  }
+
+  @media ${device.tablet} {
+    padding: 35px;
+  }
+
+  @media ${device.mobileL} {
+    padding: 15px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -46,8 +58,6 @@ export const Content = styled.div`
   text-align: center;
 `;
 export const Title = styled.h1`
-  font-size: 60px;
-  line-height: 83px;
   color: ${({ theme }) => theme.colors.main};
   margin-bottom: 30px;
 
@@ -71,10 +81,8 @@ export const Title = styled.h1`
     margin-bottom: 15px;
   }
 `;
-export const Desc = styled.p`
-  font-size: 30px;
-  line-height: 50px;
-  width: 1320px;
+export const Desc = styled.h4`
+  width: 880px;
   margin: 0 auto;
   max-width: calc(100% - 60px);
   color: ${({ theme }) => theme.colors.white};
@@ -82,13 +90,11 @@ export const Desc = styled.p`
   @media ${device.desktop} {
     font-size: 25px;
     line-height: 38px;
-    width: 943px;
   }
 
   @media ${device.laptop} {
     font-size: 30px;
     line-height: 50px;
-    width: 880px;
   }
 
   @media ${device.tablet} {

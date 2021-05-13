@@ -21,7 +21,7 @@ function OtherServices(): JSX.Element {
   }, [slug]);
   return (
     <Wrapper>
-      <Heading title="Інші Процедури" />
+      <Heading title="Інші Послуги" />
       <Container>
         <Content>
           {services.map((item) => (

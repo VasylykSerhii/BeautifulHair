@@ -48,8 +48,7 @@ export const TitleWrap = styled.div`
   }
 `;
 
-export const Title = styled.h3`
-  font-size: 45px;
+export const Title = styled.h2`
   text-transform: capitalize;
   font-weight: 700;
   padding-bottom: 20px;
@@ -81,10 +80,6 @@ export const Title = styled.h3`
       transform: translateX(-50%);
     }
   }
-
-  @media ${device.mobileL} {
-    font-size: 30px;
-  }
 `;
 
 export const DescWrap = styled.div`
@@ -96,9 +91,7 @@ export const DescWrap = styled.div`
 `;
 
 export const Desc = styled.p`
-  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
   margin-bottom: 30px;
   padding-right: 90px;
   color: ${({ theme }) => theme.colors.desc};

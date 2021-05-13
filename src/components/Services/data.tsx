@@ -21,7 +21,7 @@ export const servicesData = [
     numbers: {
       title: "Послідовність",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+        "Товарищи! рамки и место обучения кадров представляет собой интересный эксперимент проверки модели развития. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.",
       list: [
         {
           title: "Миємо волосся",
@@ -67,7 +67,7 @@ export const servicesData = [
     numbers: {
       title: "Послідовність",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+        "Товарищи! рамки и место обучения кадров представляет собой интересный эксперимент проверки модели развития. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.",
       list: [
         {
           title: "Миємо волосся",
@@ -113,7 +113,7 @@ export const servicesData = [
     numbers: {
       title: "Послідовність",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+        "Товарищи! рамки и место обучения кадров представляет собой интересный эксперимент проверки модели развития. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.",
       list: [
         {
           title: "Миємо волосся",
@@ -159,7 +159,7 @@ export const servicesData = [
     numbers: {
       title: "Послідовність",
       desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. In nisl nisi scelerisque eu ultrices vitae. Tempus egestas sed sed risus pretium quam vulputate dignissim.",
+        "Товарищи! рамки и место обучения кадров представляет собой интересный эксперимент проверки модели развития. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации систем массового участия.",
       list: [
         {
           title: "Миємо волосся",
