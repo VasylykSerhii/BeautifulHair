@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 
 import { scrollDirection } from "constants/index";
 import { useMediaQuery } from "hooks/useMediaQuery";
+import { IStore } from "redux/store";
+import { IChatState } from "redux/hooks/reducers";
 import MenuDesk from "./Desktop";
 import MobileMenu from "./Mobile";
 import {
@@ -16,7 +18,9 @@ import {
 } from "./styled-components";
 
 const Menu = (): JSX.Element => {
-  const { offsetTop, scrollDir } = useSelector((state) => state.hooks);
+  const { offsetTop, scrollDir } = useSelector<IStore, IChatState>(
+    (state) => state.hooks
+  );
   const { SCROLL_DIRECTION_DOWN } = scrollDirection;
   const isMobile = useMediaQuery(600);
 
