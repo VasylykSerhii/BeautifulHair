@@ -3,12 +3,12 @@ import createSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reducers from "./reducers";
 import sagas from "./sagas";
-import { IChatState } from "./hooks/reducers";
+import { IHooksState } from "./hooks/reducers";
 
 const sagaMiddleware = createSagaMiddleware();
 
 export interface IStore {
-  hooks: IChatState;
+  hooks: IHooksState;
 }
 
 const store = createStore(

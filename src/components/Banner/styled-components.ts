@@ -25,25 +25,12 @@ export const Content = styled.div`
   z-index: 1;
 `;
 
-export const Title = styled.h3`
-  font-size: 70px;
+export const Title = styled.h1`
   font-weight: 600;
-  line-height: 88px;
   color: ${(props) => props.theme.colors.white};
-
-  @media ${device.laptop} {
-    font-size: 55px;
-  }
-
-  @media ${device.tablet} {
-    font-size: 45px;
-    line-height: 50px;
-  }
 `;
 
-export const Description = styled.p`
-  font-size: 23px;
-  line-height: 35px;
+export const Description = styled.h5`
   font-weight: 400;
   max-width: 400px;
   color: ${(props) => props.theme.colors.title};

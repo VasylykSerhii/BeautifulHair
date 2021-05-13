@@ -1,6 +1,7 @@
+import React from "react";
 import Heading from "components/Heading";
 import { IServiceData } from "components/Services/interface";
-import React from "react";
+import InfoImg from "components/InfoImg";
 import ServiceBanner from "./components/Banner";
 import NumbersSlider from "./components/NumbersSlider";
 import Wrapper from "./components/Wrapper";
@@ -19,6 +20,8 @@ function ServiceDetail({ data }: IProps): JSX.Element {
         colors={data.colors}
         image={data.images}
       />
+      <InfoImg />
+      <InfoImg reverse />
       {data.numbers && (
         <Wrapper>
           <Heading title={data.numbers.title} desc={data.numbers.desc} />
