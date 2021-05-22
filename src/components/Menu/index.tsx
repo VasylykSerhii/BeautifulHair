@@ -2,7 +2,6 @@ import React from "react";
 import NextLink from "next/link";
 import { useSelector } from "react-redux";
 
-import { scrollDirection } from "constants/index";
 import { useMediaQuery } from "hooks/useMediaQuery";
 import { IStore } from "redux/store";
 import { IHooksState } from "redux/hooks/reducers";
