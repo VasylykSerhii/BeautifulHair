@@ -1,3 +1,4 @@
+import { IInfoBlock } from "components/Services/interface";
 import React from "react";
 import {
   Wrapper,
@@ -6,27 +7,30 @@ import {
   Content,
   Title,
   Desc,
+  List,
+  ListItem,
 } from "./styled-components";
 
-interface IProps {
+interface IProps extends IInfoBlock {
   reverse?: boolean;
 }
 
-function InfoImg({ reverse }: IProps): JSX.Element {
+function InfoImg({ title, desc, img, list, reverse }: IProps): JSX.Element {
   return (
     <Wrapper reverse={reverse}>
       <ImgWrap>
-        <Img src="/images/termoobrabotka-1024x577.jpg" />
+        <Img src={img} />
       </ImgWrap>
       <Content>
-        <Title>Горячий ботокс</Title>
-        <Desc>
-          Горячий ботокс предназначен для тех, кого, кроме оздоровления,
-          интересует еще и выпрямление кудрявых, непослушных, пушистых волос.
-          Многие путают горячий ботокс с такими процедурами, как кератиновое
-          выпрямление и нанопластика, однако между ними есть несколько
-          принципиальных отличий.{" "}
-        </Desc>
+        <Title>{title}</Title>
+        {desc && <Desc>{desc}</Desc>}
+        {list && (
+          <List>
+            {list.map((el) => (
+              <ListItem key={el}>{el}</ListItem>
+            ))}
+          </List>
+        )}
       </Content>
     </Wrapper>
   );

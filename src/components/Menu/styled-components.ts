@@ -32,27 +32,3 @@ export const MenuWrap = styled.div`
 `;
 
 export const LinkLogo = styled.a``;
-export const TextLogo = styled.h1`
-  font-family: "Dancing Script", cursive;
-  font-size: 52px;
-  line-height: 1;
-  color: ${(props) => props.theme.colors.main};
-  position: relative;
-  z-index: 3000;
-
-  @media ${device.mobileL} {
-    font-size: 42px;
-  }
-`;
-
-export const LogoDesc = styled.span`
-  font-size: 16px;
-  max-width: 70px;
-  display: inline-block;
-
-  @media ${device.mobileL} {
-    font-size: 14px;
-  }
-`;
-
-export const Span = styled.span``;
