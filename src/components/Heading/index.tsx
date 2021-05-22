@@ -5,13 +5,14 @@ import { Wrapper, Title, Description } from "./styled-components";
 interface IProps {
   title: string;
   desc?: string;
+  light?: boolean;
 }
 
-function Heading({ title, desc = null }: IProps): JSX.Element {
+function Heading({ title, light, desc = null }: IProps): JSX.Element {
   return (
     <Container>
       <Wrapper>
-        {title && <Title>{title}</Title>}
+        {title && <Title light={light}>{title}</Title>}
         {desc && <Description>{desc}</Description>}
       </Wrapper>
     </Container>
@@ -19,5 +20,6 @@ function Heading({ title, desc = null }: IProps): JSX.Element {
 }
 Heading.defaultProps = {
   desc: null,
+  light: false,
 };
 export default Heading;

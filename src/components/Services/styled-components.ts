@@ -3,19 +3,6 @@ import { device } from "assets/styles";
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 120px 0;
-
-  @media ${device.laptop} {
-    padding: 100px 0;
-  }
-
-  @media ${device.tablet} {
-    padding: 80px 0;
-  }
-
-  @media ${device.mobileL} {
-    padding: 50px 0;
-  }
 `;
 
 export const Title = styled.h3`

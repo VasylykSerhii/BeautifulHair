@@ -3,7 +3,11 @@ import { device } from "assets/styles";
 
 export const Wrapper = styled.div``;
 
-export const Title = styled.h2`
+interface IPropsTitle {
+  light?: boolean;
+}
+
+export const Title = styled.h2<IPropsTitle>`
   text-transform: capitalize;
   text-align: center;
   font-weight: 700;
@@ -17,7 +21,8 @@ export const Title = styled.h2`
     position: absolute;
     width: 100px;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.main};
+    background-color: ${({ theme, light }) =>
+      light ? theme.colors.white : theme.colors.main};
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);

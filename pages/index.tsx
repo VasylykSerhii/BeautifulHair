@@ -4,6 +4,7 @@ import About from "components/About";
 import Services from "components/Services";
 import CallToMe from "components/CallToMe";
 import Wrapper from "components/Wrapper";
+import Contact from "components/Contact";
 
 export default function Home(): JSX.Element {
   return (
@@ -14,20 +15,28 @@ export default function Home(): JSX.Element {
         img="images/maria.png"
         btnText="Написати"
       />
-      <About
-        desc={[
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu pariatur excepteur sint occaecat.",
-        ]}
-      />
-      <Services
-        title="Послуги"
-        desc="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+      <Wrapper light>
+        <About
+          desc={[
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu pariatur excepteur sint occaecat.",
+          ]}
+        />
+      </Wrapper>
+      <Wrapper>
+        <Services
+          title="Послуги"
+          desc="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
         officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
         omnis iste natur"
-      />
+        />
+      </Wrapper>
       <Wrapper light>
         <CallToMe />
+      </Wrapper>
+
+      <Wrapper>
+        <Contact />
       </Wrapper>
     </Layout>
   );

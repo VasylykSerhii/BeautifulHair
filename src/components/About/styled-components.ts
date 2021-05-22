@@ -1,33 +1,7 @@
 import { device } from "assets/styles";
 import styled from "styled-components";
 
-export const AboutWrap = styled.div`
-  padding: 120px 0;
-  position: relative;
-
-  @media ${device.laptop} {
-    padding: 100px 0;
-  }
-
-  @media ${device.tablet} {
-    padding: 80px 0;
-  }
-
-  @media ${device.mobileL} {
-    padding: 50px 0;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: ${({ theme }) => theme.colors.bodyBgLight};
-    width: 150vw;
-    height: 100%;
-    left: -50vw;
-    top: 0;
-    z-index: -1;
-  }
-`;
+export const AboutWrap = styled.div``;
 
 export const AboutContent = styled.div`
   width: 100%;
