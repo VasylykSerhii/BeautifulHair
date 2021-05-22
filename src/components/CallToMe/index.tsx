@@ -9,7 +9,7 @@ const { ButtomWhile } = Button;
 function Calltome() {
   return (
     <Container>
-      <Heading title="Хочеш зробити процедуру?" />
+      <Heading light title="Хочеш зробити процедуру?" />
       <WrapperBtn>
         <ButtomWhile> Напиши мені </ButtomWhile>
       </WrapperBtn>

@@ -4,6 +4,7 @@ const defaultTheme = {
     title: "#cccccc",
     desc: "#9f9f9f",
     gray: "#747474",
+    gray1: "#727b86",
     main: "#feb633",
     dark: "#303131",
 

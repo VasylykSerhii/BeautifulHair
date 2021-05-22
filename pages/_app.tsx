@@ -67,6 +67,11 @@ const GlobalStyle = createGlobalStyle<Props>`
     font-size: 1.25rem;
     line-height: 140%;
   }
+  
+  h6{
+    font-size: 1.25rem;
+    line-height: 140%;
+  }
 
   p{
     font-size: 1rem;
