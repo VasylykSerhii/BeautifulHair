@@ -5,8 +5,9 @@ interface IMainProps {
   notOffsetTop: boolean;
 }
 
-export const Main = styled.div<IMainProps>`
-  width: 100vw;
+export const Main = styled.main<IMainProps>`
+  width: 100%;
+  max-width: 100vw;
   overflow: hidden;
   margin-top: ${(props) => (props.notOffsetTop ? 0 : "88px")};
 

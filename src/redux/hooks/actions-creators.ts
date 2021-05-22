@@ -19,10 +19,10 @@ export const setLoadingCreation = (bool) => {
     bool,
   };
 };
-export const setScrollDirCreation = (dir) => {
+export const setScrollDirCreation = (bool) => {
   return {
     type: SET_SCROLLDIR_ACTION,
-    dir,
+    bool,
   };
 };
 export const setOffsetTopCreation = (number) => {

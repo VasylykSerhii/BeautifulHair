@@ -13,6 +13,7 @@ export const ImgWrap = styled.div`
   align-items: flex-start;
 
   @media ${device.mobileL} {
+    margin-top: 20px;
     max-width: 100%;
   }
 `;

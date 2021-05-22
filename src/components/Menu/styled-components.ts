@@ -25,17 +25,12 @@ export const MenuPosition = styled.div<IProps>`
 `;
 
 export const MenuWrap = styled.div`
-  width: 1200px;
-  max-width: calc(100% - 60px);
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media ${device.mobileL} {
-    max-width: calc(100% - 30px);
-  }
 `;
+
 export const LinkLogo = styled.a``;
 export const TextLogo = styled.h1`
   font-family: "Dancing Script", cursive;

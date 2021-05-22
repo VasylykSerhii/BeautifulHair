@@ -2,7 +2,11 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Menu from "components/Menu";
-import CustomScroll from "components/Layout/CustomScroll";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { useScrollBarDara } from "hooks";
+import { useSelector } from "react-redux";
+import { IStore } from "redux/store";
+import { IHooksState } from "redux/hooks/reducers";
 import { Main } from "./styled-components";
 
 interface IProps {
@@ -13,7 +17,18 @@ interface IProps {
 
 function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
   const router = useRouter();
+
   const url = router && router.pathname;
+  const { setScrollDir, setOffsetTop } = useScrollBarDara();
+  const { isScrollDown } = useSelector<IStore, IHooksState>(
+    (state) => state.hooks
+  );
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    const isShow = currPos.y > prevPos.y;
+    setOffsetTop(Math.abs(currPos.y - (notOffsetTop ? 0 : 88)));
+    if (isShow !== isScrollDown) setScrollDir(!isScrollDown);
+  });
 
   return (
     <div>
@@ -23,9 +38,7 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
       </Head>
       <Menu />
 
-      <CustomScroll>
-        <Main notOffsetTop={notOffsetTop}>{children}</Main>
-      </CustomScroll>
+      <Main notOffsetTop={notOffsetTop}>{children}</Main>
       {/* <Footer/> */}
     </div>
   );

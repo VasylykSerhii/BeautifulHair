@@ -2,13 +2,13 @@ import { AnyAction } from "redux";
 import { SET_STATE_HOOKS_ACTION } from "./actions-types";
 
 export interface IHooksState {
-  scrollDir: string;
+  isScrollDown: boolean;
   offsetTop: number;
   loading: boolean;
 }
 
 const initialState: IHooksState = {
-  scrollDir: "",
+  isScrollDown: false,
   offsetTop: null,
   loading: false,
 };

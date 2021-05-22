@@ -29,8 +29,6 @@ const GlobalStyle = createGlobalStyle<Props>`
   body{
     background-color: ${({ theme }) => theme.colors.bodyBg};
     color: ${({ theme }) => theme.colors.gray};
-    min-height: 100vh;
-    min-width: 100vw;
   }
 
   body *,
