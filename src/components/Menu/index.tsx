@@ -1,21 +1,14 @@
 import React from "react";
 import NextLink from "next/link";
 import { useSelector } from "react-redux";
-
+import { Logo } from "assets/icons";
 import { useMediaQuery } from "hooks/useMediaQuery";
 import { IStore } from "redux/store";
 import { IHooksState } from "redux/hooks/reducers";
 import { Container } from "@material-ui/core";
 import MenuDesk from "./Desktop";
 import MobileMenu from "./Mobile";
-import {
-  MenuPosition,
-  MenuWrap,
-  TextLogo,
-  LogoDesc,
-  Span,
-  LinkLogo,
-} from "./styled-components";
+import { MenuPosition, MenuWrap, LinkLogo } from "./styled-components";
 
 const Menu = (): JSX.Element => {
   const { offsetTop, isScrollDown } = useSelector<IStore, IHooksState>(
@@ -37,10 +30,7 @@ const Menu = (): JSX.Element => {
         <MenuWrap>
           <NextLink href="/" passHref>
             <LinkLogo>
-              <TextLogo>
-                <Span>BH</Span>
-                <LogoDesc>Beautiful Hair</LogoDesc>
-              </TextLogo>
+              <Logo />
             </LinkLogo>
           </NextLink>
 

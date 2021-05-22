@@ -49,25 +49,12 @@ export const Title = styled.h4`
 export const Desc = styled.p`
   margin-top: 1rem;
   color: ${({ theme }) => theme.colors.desc};
-
-  /* @media ${device.tablet} {
-    font-size: 14px;
-  } */
 `;
 
 export const Wrapper = styled.div<IWraperProps>`
   display: flex;
   align-items: center;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
-
-  @media ${device.desktop} {
-  }
-
-  @media ${device.laptop} {
-  }
-
-  @media ${device.tablet} {
-  }
 
   @media ${device.mobileL} {
     flex-direction: column-reverse;
@@ -95,4 +82,29 @@ export const Wrapper = styled.div<IWraperProps>`
         }
       }
     `};
+`;
+
+export const List = styled.ol``;
+
+export const ListItem = styled.li`
+  margin-top: 0.5rem;
+  color: ${({ theme }) => theme.colors.desc};
+  position: relative;
+  padding-left: 1rem;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: ${({ theme }) => theme.colors.main};
+  }
 `;

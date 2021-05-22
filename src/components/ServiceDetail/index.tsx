@@ -20,12 +20,29 @@ function ServiceDetail({ data }: IProps): JSX.Element {
         colors={data.colors}
         image={data.images}
       />
-      <Wrapper>
-        <InfoImg />
-      </Wrapper>
-      <Wrapper light>
-        <InfoImg reverse />
-      </Wrapper>
+
+      {data.infoBlock && (
+        <Wrapper>
+          <InfoImg
+            title={data.infoBlock.title}
+            desc={data.infoBlock.desc}
+            img={data.infoBlock.img}
+            list={data.infoBlock.list}
+          />
+        </Wrapper>
+      )}
+
+      {data.infoBlockReverse && (
+        <Wrapper light>
+          <InfoImg
+            title={data.infoBlockReverse.title}
+            desc={data.infoBlockReverse.desc}
+            img={data.infoBlockReverse.img}
+            list={data.infoBlockReverse.list}
+            reverse
+          />
+        </Wrapper>
+      )}
       {data.numbers && (
         <Wrapper>
           <Heading title={data.numbers.title} desc={data.numbers.desc} />

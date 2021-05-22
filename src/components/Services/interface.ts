@@ -2,6 +2,13 @@ export interface IServiceNumbers {
   title: string;
   desc: string;
 }
+
+export interface IInfoBlock {
+  img: string;
+  title: string;
+  desc?: string;
+  list?: string[];
+}
 export interface IServiceData {
   slug: string;
   icon: JSX.Element;
@@ -17,4 +24,6 @@ export interface IServiceData {
     desc: string;
     list: IServiceNumbers[];
   };
+  infoBlock?: IInfoBlock;
+  infoBlockReverse?: IInfoBlock;
 }

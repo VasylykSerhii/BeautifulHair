@@ -25,7 +25,7 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
   );
 
   useScrollPosition(({ prevPos, currPos }) => {
-    const isShow = currPos.y > prevPos.y;
+    const isShow = currPos.y < prevPos.y;
     setOffsetTop(Math.abs(currPos.y - (notOffsetTop ? 0 : 88)));
     if (isShow !== isScrollDown) setScrollDir(!isScrollDown);
   });
