@@ -4,7 +4,7 @@ import { IServiceData } from "components/Services/interface";
 import InfoImg from "components/InfoImg";
 import ServiceBanner from "./components/Banner";
 import NumbersSlider from "./components/NumbersSlider";
-import Wrapper from "./components/Wrapper";
+import Wrapper from "../Wrapper";
 import OtherServices from "./components/OtherServices";
 
 interface IProps {

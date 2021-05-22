@@ -2,6 +2,8 @@ import Layout from "components/Layout";
 import Banner from "components/Banner";
 import About from "components/About";
 import Services from "components/Services";
+import CallToMe from "components/CallToMe";
+import Wrapper from "components/Wrapper";
 
 export default function Home(): JSX.Element {
   return (
@@ -24,6 +26,9 @@ export default function Home(): JSX.Element {
         officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
         omnis iste natur"
       />
+      <Wrapper light>
+        <CallToMe />
+      </Wrapper>
     </Layout>
   );
 }
