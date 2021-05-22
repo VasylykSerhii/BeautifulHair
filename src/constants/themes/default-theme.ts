@@ -5,6 +5,7 @@ const defaultTheme = {
     desc: "#9f9f9f",
     gray: "#747474",
     main: "#feb633",
+    dark: "#303131",
 
     // backgroun color
     bodyBg: "#2b2c2c",

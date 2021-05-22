@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "assets/styles";
-import Link from "next/link";
 import { Container } from "@material-ui/core";
 import {
   BannerWrap,
@@ -33,9 +32,7 @@ export default function Banner({
             <Title>{title}</Title>
             <Description>{desc}</Description>
             <ButtonWrap>
-              <Link href="/">
-                <ButtomPrimary isBig>{btnText}</ButtomPrimary>
-              </Link>
+              <ButtomPrimary isBig>{btnText}</ButtomPrimary>
             </ButtonWrap>
           </Content>
           <Img src={img} alt="person" />

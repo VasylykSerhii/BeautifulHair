@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const Buttom = styled.a<{ isBig?: boolean }>`
+const Buttom = styled.button<{ isBig?: boolean }>`
   transition: ${({ theme }) => theme.trns};
   text-transform: capitalize;
   cursor: pointer;
@@ -56,4 +56,16 @@ const ButtomPrimaryReverse = styled(Buttom)`
   }
 `;
 
-export default { Buttom, ButtomPrimary, ButtomPrimaryReverse };
+const ButtomWhile = styled(ButtomPrimary)`
+  color: ${({ theme }) => theme.colors.dark};
+  border-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.main};
+  }
+`;
+
+export default { Buttom, ButtomPrimary, ButtomPrimaryReverse, ButtomWhile };
