@@ -6,6 +6,7 @@ import { scrollDirection } from "constants/index";
 import { useMediaQuery } from "hooks/useMediaQuery";
 import { IStore } from "redux/store";
 import { IHooksState } from "redux/hooks/reducers";
+import { Container } from "@material-ui/core";
 import MenuDesk from "./Desktop";
 import MobileMenu from "./Mobile";
 import {
@@ -18,33 +19,35 @@ import {
 } from "./styled-components";
 
 const Menu = (): JSX.Element => {
-  const { offsetTop, scrollDir } = useSelector<IStore, IHooksState>(
+  const { offsetTop, isScrollDown } = useSelector<IStore, IHooksState>(
     (state) => state.hooks
   );
-  const { SCROLL_DIRECTION_DOWN } = scrollDirection;
+
   const isMobile = useMediaQuery(600);
 
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
-    ...(offsetTop >= 100 && scrollDir === SCROLL_DIRECTION_DOWN
+    ...(offsetTop >= 100 && isScrollDown
       ? { menuHide: true }
       : { menuHide: false }),
   };
 
   return (
     <MenuPosition {...settingMenu}>
-      <MenuWrap>
-        <NextLink href="/" passHref>
-          <LinkLogo>
-            <TextLogo>
-              <Span>BH</Span>
-              <LogoDesc>Beautiful Hair</LogoDesc>
-            </TextLogo>
-          </LinkLogo>
-        </NextLink>
+      <Container>
+        <MenuWrap>
+          <NextLink href="/" passHref>
+            <LinkLogo>
+              <TextLogo>
+                <Span>BH</Span>
+                <LogoDesc>Beautiful Hair</LogoDesc>
+              </TextLogo>
+            </LinkLogo>
+          </NextLink>
 
-        {isMobile ? <MobileMenu /> : <MenuDesk />}
-      </MenuWrap>
+          {isMobile ? <MobileMenu /> : <MenuDesk />}
+        </MenuWrap>
+      </Container>
     </MenuPosition>
   );
 };

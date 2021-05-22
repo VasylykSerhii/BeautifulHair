@@ -20,8 +20,12 @@ function ServiceDetail({ data }: IProps): JSX.Element {
         colors={data.colors}
         image={data.images}
       />
-      <InfoImg />
-      <InfoImg reverse />
+      <Wrapper>
+        <InfoImg />
+      </Wrapper>
+      <Wrapper light>
+        <InfoImg reverse />
+      </Wrapper>
       {data.numbers && (
         <Wrapper>
           <Heading title={data.numbers.title} desc={data.numbers.desc} />
@@ -29,7 +33,7 @@ function ServiceDetail({ data }: IProps): JSX.Element {
         </Wrapper>
       )}
 
-      <Wrapper>
+      <Wrapper light>
         <OtherServices />
       </Wrapper>
     </div>

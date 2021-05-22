@@ -12,7 +12,7 @@ export function* setLoadingHooks(action) {
 }
 
 export function* setScrollDir(action) {
-  yield put(setStateCreation({ scrollDir: action.dir }));
+  yield put(setStateCreation({ isScrollDown: action.bool }));
 }
 
 export function* setOffsetTop(action) {

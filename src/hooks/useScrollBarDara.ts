@@ -6,25 +6,25 @@ import {
 } from "redux/hooks/actions-creators";
 
 interface IProps {
-  scrollDir: string;
-  setScrollDir: Dispatch<SetStateAction<string>>;
+  isScrollDown: boolean;
+  setScrollDir: Dispatch<SetStateAction<boolean>>;
   offsetTop: number;
   setOffsetTop: Dispatch<SetStateAction<number>>;
 }
 
 function useScrollBarDara(): IProps {
   const dispatch = useDispatch();
-  const [scrollDir, setScrollDir] = useState("up");
+  const [isScrollDown, setScrollDir] = useState(false);
   const [offsetTop, setOffsetTop] = useState(0);
 
   useEffect(() => {
-    dispatch(setScrollDirCreation(scrollDir));
-  }, [scrollDir, dispatch]);
+    dispatch(setScrollDirCreation(isScrollDown));
+  }, [isScrollDown, dispatch]);
 
   useEffect(() => {
     dispatch(setOffsetTopCreation(offsetTop));
   }, [offsetTop, dispatch]);
 
-  return { scrollDir, setScrollDir, offsetTop, setOffsetTop };
+  return { isScrollDown, setScrollDir, offsetTop, setOffsetTop };
 }
 export default useScrollBarDara;
