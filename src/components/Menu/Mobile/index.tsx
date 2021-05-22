@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { IHooksState } from "redux/hooks/reducers";
+import { IStore } from "redux/store";
 import CustomMobileLink from "../CustomMobileLink";
 import { menuItems } from "../menuItems";
 
@@ -16,7 +18,9 @@ const animationStartOffset = 2;
 
 function MobileMenu(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
-  const { offsetTop } = useSelector((state) => state.hooks);
+  const { offsetTop } = useSelector<IStore, IHooksState>(
+    (state) => state.hooks
+  );
   const settingMenu = {
     ...(offsetTop >= 100 ? { bgDark: true } : null),
   };
