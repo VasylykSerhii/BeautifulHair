@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Button, Container } from "assets/styles";
+import { Buttons, Container } from "assets/styles";
 import {
   AboutWrap,
   AboutContent,
@@ -14,7 +14,7 @@ interface IProps {
   desc: string[];
 }
 
-const { ButtomPrimaryReverse } = Button;
+const { ButtomPrimaryReverse } = Buttons;
 
 function About({ desc }: IProps): JSX.Element {
   return (

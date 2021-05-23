@@ -1,9 +1,9 @@
 import Heading from "components/Heading";
-import { Button, Container } from "assets/styles";
+import { Buttons, Container } from "assets/styles";
 import React from "react";
 import { WrapperBtn } from "./styled-components";
 
-const { ButtomWhile } = Button;
+const { ButtomWhile } = Buttons;
 
 function Calltome() {
   return (

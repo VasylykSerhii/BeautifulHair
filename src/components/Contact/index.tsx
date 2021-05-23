@@ -12,7 +12,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { Button, Container, Input } from "assets/styles";
+import { Buttons, Container, Input } from "assets/styles";
 
 import {
   Form,
@@ -25,7 +25,7 @@ import {
   InfoWrap,
 } from "./styled-components";
 
-const { ButtomPrimary } = Button;
+const { ButtomPrimary } = Buttons;
 function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
