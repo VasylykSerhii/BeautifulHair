@@ -1,6 +1,5 @@
-import { Container } from "@material-ui/core";
 import Heading from "components/Heading";
-import { Button } from "assets/styles";
+import { Button, Container } from "assets/styles";
 import React from "react";
 import { WrapperBtn } from "./styled-components";
 
