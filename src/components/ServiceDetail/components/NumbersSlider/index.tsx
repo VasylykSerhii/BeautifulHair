@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { IServiceNumbers } from "components/Services/interface";
+import { useMediaQuery } from "hooks/useMediaQuery";
 import {
   Slider,
   SliderLine,
@@ -26,8 +26,8 @@ function NumbersSlider({ numbers }: IProps): JSX.Element {
   };
   let transform;
   let transform2;
-  const upLaptop = useMediaQuery("(min-width: 1281px)");
-  const upMobile = useMediaQuery("(min-width: 601px)");
+  const upLaptop = !useMediaQuery(1280);
+  const upMobile = !useMediaQuery(600);
 
   if (upLaptop) {
     transform = { transform: `scaleX(${currentItem * 0.2})` };

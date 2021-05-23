@@ -1,10 +1,10 @@
-import { Container } from "@material-ui/core";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { servicesData } from "components/Services/data";
 import ServicesCard from "components/ServicesCard";
 import Heading from "components/Heading";
-import getRandom from "utils/getRandomFromArray";
+import { getRandomFromArray } from "utils";
+import { Container } from "assets/styles";
 import { Wrapper, Content } from "./styled-components";
 
 function OtherServices(): JSX.Element {
@@ -13,7 +13,7 @@ function OtherServices(): JSX.Element {
 
   useEffect(() => {
     setServices(
-      getRandom(
+      getRandomFromArray(
         servicesData.filter((item) => item.slug !== slug),
         2
       )

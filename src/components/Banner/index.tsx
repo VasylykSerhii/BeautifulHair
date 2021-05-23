@@ -1,6 +1,5 @@
 import React from "react";
-import { Button } from "assets/styles";
-import { Container } from "@material-ui/core";
+import { Button, Container } from "assets/styles";
 import {
   BannerWrap,
   ContentWrap,

@@ -1,4 +1,7 @@
-const getRandom = <T>(arr: T[], n: number) => {
+export const regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/;
+export const regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+export const getRandomFromArray = <T>(arr: T[], n: number) => {
   const result = new Array(n);
   let len = arr.length;
   let total = n;
@@ -17,5 +20,3 @@ const getRandom = <T>(arr: T[], n: number) => {
   }
   return result;
 };
-
-export default getRandom;

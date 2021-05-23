@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "components/Heading";
 import ServicesCard from "components/ServicesCard";
-import { Container } from "@material-ui/core";
+import { Container } from "assets/styles";
 import { servicesData } from "./data";
 import { Wrapper, Content } from "./styled-components";
 

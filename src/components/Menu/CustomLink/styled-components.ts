@@ -10,12 +10,19 @@ export const Item = styled.a<{ active?: boolean }>`
   &:before {
     position: absolute;
     content: "";
-    left: 0;
+    left: ${(props) => (props.active ? 0 : "50%")};
     top: calc(100% + 5px);
     height: 2px;
     width: ${(props) => (props.active ? "50%" : 0)};
-    background-color: $main;
-    transition: $trns;
+    background-color: ${({ theme }) => theme.colors.main};
+    transition: ${({ theme }) => theme.trns};
+  }
+
+  &:hover {
+    &:before {
+      left: 0;
+      width: 100%;
+    }
   }
 
   &:not(:last-of-type) {

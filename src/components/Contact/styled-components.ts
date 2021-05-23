@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 4fr 6fr;
+  grid-template-columns: 3fr 6fr;
   grid-gap: 30px;
   margin-top: 80px;
 
@@ -41,8 +41,9 @@ export const InfoDesc = styled.p`
 
 export const InfoLink = styled.a`
   color: ${({ theme }) => theme.colors.gray1};
-  transition: ${({ theme }) => theme.colors.trns};
+  transition: ${({ theme }) => theme.trns};
   display: flex;
+  align-items: center;
 
   &:hover {
     color: ${({ theme }) => theme.colors.main};
@@ -56,3 +57,5 @@ export const InfoLinksWrap = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const Form = styled.form``;

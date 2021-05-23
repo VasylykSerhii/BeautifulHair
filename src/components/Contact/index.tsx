@@ -1,14 +1,21 @@
 import Heading from "components/Heading";
-import React from "react";
-import { Container } from "@material-ui/core";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
-  EmailRounded,
-  LocationOn,
-  Phone,
-  Telegram,
-  Instagram,
-} from "@material-ui/icons";
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import {
+  faTelegramPlane,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { Button, Container, Input } from "assets/styles";
+
+import {
+  Form,
   Grid,
   InfoDesc,
   InfoItem,
@@ -18,7 +25,13 @@ import {
   InfoWrap,
 } from "./styled-components";
 
+const { ButtomPrimary } = Button;
 function Contact() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
+
   return (
     <Container>
       <Heading title="Зв'яжіться зі мною" />
@@ -26,50 +39,70 @@ function Contact() {
         <InfoWrap>
           <InfoTitle>Мої дані:</InfoTitle>
           <InfoItem>
-            <LocationOn />
-            <InfoDesc>Самбірський р-н., с.Бісковичі</InfoDesc>
+            <InfoLink
+              href="http://maps.google.com/?q=вул.+Івана+Франка,+Бісковичі,+Львівська+область,+81457"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <InfoDesc>Самбірський р-н., с.Бісковичі</InfoDesc>
+            </InfoLink>
           </InfoItem>
           <InfoItem>
             <InfoLink href="mailto:vasylyk97@gmail.com">
-              <EmailRounded />
+              <FontAwesomeIcon icon={faEnvelope} />
               <InfoDesc>vasylyk97@gmail.com</InfoDesc>
             </InfoLink>
           </InfoItem>
           <InfoItem>
             <InfoLink href="tel:+380988803187">
-              <Phone />
+              <FontAwesomeIcon icon={faPhone} />
               <InfoDesc>+38 098 88 03 187</InfoDesc>
             </InfoLink>
           </InfoItem>
           <InfoTitle>В мережах:</InfoTitle>
           <InfoLinksWrap>
             <InfoLink href="tg://resolve?domain=masha_bukliv" target="_blank">
-              <Telegram fontSize="small" />
+              <FontAwesomeIcon icon={faTelegramPlane} />
             </InfoLink>
             <InfoLink
               href="http://instagram.com/_u/vasylyk_marusia/"
               target="_blank"
             >
-              <Instagram fontSize="small" />
+              <FontAwesomeIcon icon={faInstagram} />
             </InfoLink>
           </InfoLinksWrap>
         </InfoWrap>
-        <div>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
-          consequatur non dolores iure qui, nisi officia necessitatibus iste
-          earum similique commodi voluptatum repellendus fugiat! Dolorem libero
-          placeat numquam. Commodi, voluptatibus. Blanditiis, atque id? Aut
-          deserunt, ipsam quos quasi minus sit, iste laudantium minima rerum
-          quas iure vel. Libero reprehenderit magnam nobis totam neque ipsam,
-          sunt eaque hic qui commodi unde. Temporibus amet architecto autem eos
-          eaque quo cum nulla alias. Aut quis corporis rem voluptates maiores
-          cumque dignissimos doloremque amet, illum repellendus harum nesciunt
-          saepe. Autem aut atque hic voluptatibus. Id rem consectetur ducimus
-          sunt quia delectus dolores fugiat voluptatibus necessitatibus?
-          Voluptatum, accusamus ad sed quaerat iusto placeat facere! At, sequi
-          accusamus. Magnam placeat quibusdam voluptate reprehenderit eaque
-          tenetur voluptates!
-        </div>
+        <Form autoComplete="off">
+          <Input
+            label="Ім'я"
+            value={name}
+            onChange={setName}
+            placeholder="Введіть Ім'я"
+          />
+          <Input
+            label="Номер Телефону"
+            value={phone}
+            onChange={setPhone}
+            type="mask-input"
+            mask="+38 (099) 99 99 999"
+            placeholder="Введіть Номер Телефону"
+          />
+          <Input
+            label="Електронна пошта"
+            value={email}
+            onChange={setEmail}
+            placeholder="Введіть Електронну пошту"
+          />
+          <Input
+            label="Опис"
+            value={text}
+            onChange={setText}
+            type="textarea"
+            placeholder="Опишіть ваше звернення (не обов'язково)"
+          />
+
+          <ButtomPrimary type="button">Відправити</ButtomPrimary>
+        </Form>
       </Grid>
     </Container>
   );

@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core";
+import { Container } from "assets/styles";
 import React from "react";
 import { Wrapper, Title, Description } from "./styled-components";
 

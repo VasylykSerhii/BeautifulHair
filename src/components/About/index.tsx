@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "assets/styles";
-import { Container } from "@material-ui/core";
+import { Button, Container } from "assets/styles";
 import {
   AboutWrap,
   AboutContent,
