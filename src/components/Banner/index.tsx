@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container } from "assets/styles";
+import { Buttons, Container } from "assets/styles";
 import {
   BannerWrap,
   ContentWrap,
@@ -16,7 +16,7 @@ interface IProps {
   img: string;
   btnText: string;
 }
-const { ButtomPrimary } = Button;
+const { ButtomPrimary } = Buttons;
 export default function Banner({
   title,
   desc,
