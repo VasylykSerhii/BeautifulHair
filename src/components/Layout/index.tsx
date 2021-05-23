@@ -7,6 +7,7 @@ import { useScrollBarDara } from "hooks";
 import { useSelector } from "react-redux";
 import { IStore } from "redux/store";
 import { IHooksState } from "redux/hooks/reducers";
+import Footer from "components/Footer";
 import { Main } from "./styled-components";
 
 interface IProps {
@@ -39,7 +40,7 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
       <Menu />
 
       <Main notOffsetTop={notOffsetTop}>{children}</Main>
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }
