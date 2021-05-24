@@ -1,5 +1,5 @@
 import Heading from "components/Heading";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -26,8 +26,15 @@ import {
 } from "./styled-components";
 
 const { ButtomPrimary } = Buttons;
+const initialState = {
+  name: "",
+  email: "",
+  text: "",
+  phone: "",
+};
+
 function Contact() {
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState(initialState);
 
   const handleChange = (
     e:
