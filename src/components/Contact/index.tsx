@@ -1,7 +1,6 @@
 import Heading from "components/Heading";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faEnvelope,
   faMapMarkerAlt,
@@ -12,7 +11,8 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { Buttons, Container, Input } from "assets/styles";
+import { Buttons, Container } from "assets/styles";
+import Input from "components/Input";
 
 import {
   Form,
@@ -27,10 +27,19 @@ import {
 
 const { ButtomPrimary } = Buttons;
 function Contact() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [text, setText] = useState("");
+  const [values, setValues] = useState({});
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 
   return (
     <Container>
@@ -75,30 +84,34 @@ function Contact() {
         <Form autoComplete="off">
           <Input
             label="Ім'я"
-            value={name}
-            onChange={setName}
-            placeholder="Введіть Ім'я"
+            value={values?.name}
+            onChange={handleChange}
+            placeholder="Введіть Ім'я*"
+            name="name"
           />
           <Input
             label="Номер Телефону"
-            value={phone}
-            onChange={setPhone}
+            value={values?.phone}
+            onChange={handleChange}
             type="mask-input"
             mask="+38 (099) 99 99 999"
-            placeholder="Введіть Номер Телефону"
+            placeholder="Введіть Номер Телефону*"
+            name="phone"
           />
           <Input
             label="Електронна пошта"
-            value={email}
-            onChange={setEmail}
-            placeholder="Введіть Електронну пошту"
+            value={values?.email}
+            onChange={handleChange}
+            placeholder="Введіть Електронну пошту*"
+            name="email"
           />
           <Input
             label="Опис"
-            value={text}
-            onChange={setText}
+            value={values?.text}
+            onChange={handleChange}
             type="textarea"
-            placeholder="Опишіть ваше звернення (не обов'язково)"
+            placeholder="Опишіть ваше звернення"
+            name="text"
           />
 
           <ButtomPrimary type="button">Відправити</ButtomPrimary>
