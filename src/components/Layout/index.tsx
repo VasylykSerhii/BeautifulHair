@@ -40,7 +40,7 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
       <Menu />
 
       <Main notOffsetTop={notOffsetTop}>{children}</Main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
