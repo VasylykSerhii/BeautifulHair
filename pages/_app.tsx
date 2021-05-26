@@ -6,6 +6,7 @@ import reset from "styled-reset";
 
 import { themes } from "constants/index";
 import { device } from "assets/styles";
+import axios from "axios";
 
 type Props = {
   theme: typeof themes.defaultTheme;
@@ -36,6 +37,8 @@ const GlobalStyle = createGlobalStyle<Props>`
   * {
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
   }
 
   a{
@@ -78,6 +81,8 @@ const GlobalStyle = createGlobalStyle<Props>`
     line-height: 145%;
   }
 `;
+
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_URL || "";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (

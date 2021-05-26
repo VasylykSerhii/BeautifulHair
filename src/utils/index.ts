@@ -1,5 +1,6 @@
 export const regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/;
 export const regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const regName = /[a-zA-Zа-яєіА-ЯЄІ0-9-_" "]{1,20}$/;
 
 export const getRandomFromArray = <T>(arr: T[], n: number) => {
   const result = new Array(n);
