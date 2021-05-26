@@ -1,5 +1,6 @@
 import Heading from "components/Heading";
 import React, { useState } from "react";
+import { string, object, SchemaOf } from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -14,6 +15,8 @@ import {
 import { Buttons, Container } from "assets/styles";
 import Input from "components/Input";
 
+import { regEmail, regPhone } from "utils";
+import { sendMail } from "services/mail";
 import {
   Form,
   Grid,
@@ -26,15 +29,36 @@ import {
 } from "./styled-components";
 
 const { ButtomPrimary } = Buttons;
-const initialState = {
-  name: "",
-  email: "",
-  text: "",
-  phone: "",
-};
+
+export interface IDataMessage {
+  name: string;
+  phone: string;
+  email: string;
+  text: string;
+}
+interface IErrors {
+  name: string;
+  phone: string;
+  email: string;
+}
+
+const schema: SchemaOf<IDataMessage> = object().shape({
+  name: string()
+    .required("Поле ім'я обовязкове")
+    .min(3, "Мінінум 3 символа")
+    .max(30, "Максимум 30 символа"),
+  phone: string()
+    .required("Поле номер телефону обовязкове")
+    .matches(regPhone, "Номер телфону не вірний"),
+  email: string()
+    .required("Поле електронної пошти обовязкове")
+    .matches(regEmail, "Електронна пошта не вірна"),
+  text: string(),
+});
 
 function Contact() {
-  const [values, setValues] = useState(initialState);
+  const [values, setValues] = useState<IDataMessage>();
+  const [errors, setErrors] = useState<IErrors>();
 
   const handleChange = (
     e:
@@ -42,10 +66,26 @@ function Contact() {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value,
+    setValues((prevState) => {
+      return { ...prevState, [name]: value };
     });
+  };
+
+  const handleSubmit = () => {
+    setErrors({});
+    schema
+      .validate(values, { abortEarly: false })
+      .then(() => {
+        sendMail({ ...values });
+      })
+
+      .catch((err) => {
+        err.inner.forEach((e) => {
+          setErrors((prevState) => {
+            return { ...prevState, [e.path]: e.message };
+          });
+        });
+      });
   };
 
   return (
@@ -95,6 +135,7 @@ function Contact() {
             onChange={handleChange}
             placeholder="Введіть Ім'я*"
             name="name"
+            error={errors?.name}
           />
           <Input
             label="Номер Телефону"
@@ -104,6 +145,7 @@ function Contact() {
             mask="+38 (099) 99 99 999"
             placeholder="Введіть Номер Телефону*"
             name="phone"
+            error={errors?.phone}
           />
           <Input
             label="Електронна пошта"
@@ -111,6 +153,7 @@ function Contact() {
             onChange={handleChange}
             placeholder="Введіть Електронну пошту*"
             name="email"
+            error={errors?.email}
           />
           <Input
             label="Опис"
@@ -121,7 +164,9 @@ function Contact() {
             name="text"
           />
 
-          <ButtomPrimary type="button">Відправити</ButtomPrimary>
+          <ButtomPrimary type="button" onClick={handleSubmit}>
+            Відправити
+          </ButtomPrimary>
         </Form>
       </Grid>
     </Container>

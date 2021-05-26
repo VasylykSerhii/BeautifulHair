@@ -13,6 +13,7 @@ interface IProps {
   placeholder: string;
   type?: string;
   mask?: string;
+  error?: string;
   name: string;
   onChange: (
     e?:
@@ -42,11 +43,20 @@ const InputSelect = ({ type, ...rest }: IProps) => {
   return <>{Component}</>;
 };
 
-function Input({ label, type, value, onChange, ...rest }: IProps) {
+function Input({ label, type, value, error, onChange, ...rest }: IProps) {
   return (
     <InputWrap>
       <Label htmlFor={label}>{label}</Label>
-      <InputSelect {...rest} value={value} onChange={onChange} type={type} />
+      <InputSelect
+        {...rest}
+        value={value}
+        error={error}
+        onChange={onChange}
+        type={type}
+      />
+      <Label htmlFor={label} error={error}>
+        {error}
+      </Label>
     </InputWrap>
   );
 }
@@ -55,10 +65,12 @@ Input.defaultProps = {
   label: null,
   mask: null,
   type: null,
+  error: null,
 };
 
 InputSelect.defaultProps = {
   type: null,
+  error: null,
   mask: null,
   label: null,
 };

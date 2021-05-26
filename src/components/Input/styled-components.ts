@@ -3,8 +3,11 @@ import InputMask from "react-input-mask";
 
 import styled, { css } from "styled-components";
 
+interface IPropsError {
+  error?: string;
+}
 const InputStyled = css`
-  border: none;
+  border: 1px solid transparent;
   color: ${({ theme }) => theme.colors.gray};
   padding: 6px 25px;
   height: 2.85rem;
@@ -22,21 +25,31 @@ const InputStyled = css`
   }
 `;
 
-export const InputField = styled.input`
+export const InputField = styled.input<IPropsError>`
   ${InputStyled}
-
+  ${({ error, theme }) =>
+    error &&
+    css`
+      border-color: ${theme.colors.error};
+    `}
   @media ${device.mobileL} {
   }
 `;
 
 export const InputMaskField = styled(InputMask)`
   ${InputStyled}
+  ${({ error, theme }) =>
+    error &&
+    css`
+      border-color: ${theme.colors.error};
+    `}
   @media ${device.mobileL} {
   }
 `;
 
 export const Textarea = styled.textarea`
   ${InputStyled}
+
   resize: none;
   padding-top: 16px;
   width: 100%;
@@ -52,6 +65,16 @@ export const InputWrap = styled.div`
   margin-bottom: 1.4rem;
 `;
 
-export const Label = styled.label`
+export const Label = styled.label<IPropsError>`
   margin-bottom: 0.67rem;
+
+  ${({ error, theme }) =>
+    error &&
+    css`
+      margin-bottom: 0;
+      margin-top: 0.3rem;
+      color: ${theme.colors.error};
+      font-size: 0.8rem;
+      padding: 0 25px;
+    `}
 `;
