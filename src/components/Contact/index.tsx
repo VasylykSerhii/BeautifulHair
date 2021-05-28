@@ -58,7 +58,7 @@ const schema: SchemaOf<IDataMessage> = object().shape({
 
 function Contact() {
   const [values, setValues] = useState<IDataMessage>();
-  const [errors, setErrors] = useState<IErrors>();
+  const [errors, setErrors] = useState<IErrors | null>(null);
 
   const handleChange = (
     e:
@@ -72,7 +72,8 @@ function Contact() {
   };
 
   const handleSubmit = () => {
-    setErrors({});
+    setErrors(null);
+
     schema
       .validate(values, { abortEarly: false })
       .then(() => {

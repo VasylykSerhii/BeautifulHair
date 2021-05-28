@@ -13,5 +13,4 @@ const CreatePost = (): JSX.Element => {
     </div>
   );
 };
-
 export default CreatePost;
