@@ -35,10 +35,11 @@ const typeInput = (type, props) => {
 
 const InputSelect = ({ type, ...rest }: IProps) => {
   const [Component, setComponent] = useState(null);
+
   useEffect(() => {
     setComponent(typeInput(type, rest));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [rest.error]);
 
   return <>{Component}</>;
 };
