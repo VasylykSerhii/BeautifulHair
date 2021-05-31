@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .js,jsx,ts,tsx src pages",
     "lint:fix": "eslint --fix --ext .js,jsx,ts,tsx src pages"
@@ -24,8 +24,8 @@
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-html-parser": "^2.0.2",
     "react-input-mask": "^2.0.4",
+    "react-is": "^17.0.2",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",

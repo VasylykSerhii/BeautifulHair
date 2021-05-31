@@ -1,32 +1,31 @@
-# stage1 as builder
-FROM node:10-alpine as builder
+# Base on offical Node.js Alpine image
+FROM node:alpine
 
-# copy the package.json to install dependencies
-COPY package.json package-lock.json ./
+# Set working directory
+WORKDIR /usr/app
 
-# Install the dependencies and make the folder
-RUN npm install && mkdir /nextjs-ui && mv ./node_modules ./nextjs-ui
+# Install PM2 globally
+# RUN yarn global add pm2
 
-WORKDIR /nextjs-ui
+# Copy package.json and package-lock.json before other files
+# Utilise Docker cache to save re-installing dependencies if unchanged
+COPY ./package*.json ./
 
-COPY . .
+# Install dependencies
+RUN yarn
 
-# Build the project and copy the files
-RUN npm run build
+# Copy all files
+COPY ./ ./
 
+# Build app
+RUN yarn run build
 
-FROM nginx:alpine
+# Expose the listening port
+EXPOSE 3000
 
-#!/bin/sh
+# Run container as non-root (unprivileged) user
+# The node user is provided in the Node.js Alpine base image
+USER node
 
-COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
-
-## Remove default nginx index page
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy from the stahg 1
-COPY --from=builder /nextjs-ui/out /usr/share/nginx/html
-
-EXPOSE 3000 80
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# Run yarn start script with PM2 when container starts
+CMD [ "yarn", "--", "start" ]
