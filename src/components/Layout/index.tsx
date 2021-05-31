@@ -36,6 +36,7 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
       <Head>
         <title>{title}</title>
         <meta property="og:url" content={url} />
+        <link rel="icon" href="/favicon.png" />=
       </Head>
       <Menu />
 
