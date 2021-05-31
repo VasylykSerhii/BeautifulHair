@@ -44,14 +44,14 @@ interface IErrors {
 
 const schema: SchemaOf<IDataMessage> = object().shape({
   name: string()
-    .required("Поле ім'я обовязкове")
+    .required("Поле ім'я обов'язкове")
     .min(3, "Мінінум 3 символа")
     .max(30, "Максимум 30 символа"),
   phone: string()
-    .required("Поле номер телефону обовязкове")
+    .required("Поле номер телефону обов'язкове")
     .matches(regPhone, "Номер телфону не вірний"),
   email: string()
-    .required("Поле електронної пошти обовязкове")
+    .required("Поле електронної пошти обов'язкове")
     .matches(regEmail, "Електронна пошта не вірна"),
   text: string(),
 });
