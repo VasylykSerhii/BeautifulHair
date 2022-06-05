@@ -1,11 +1,10 @@
 import Heading from 'components/Heading';
 import React, { useState } from 'react';
 import { string, object, SchemaOf } from 'yup';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faTelegramPlane, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import { Buttons, Container } from 'assets/styles';
+import { Buttons } from 'assets/styles';
 import Input from 'components/Input';
 
 import { regEmail, regPhone } from 'utils';
@@ -73,7 +72,7 @@ function Contact() {
   };
 
   return (
-    <Container>
+    <>
       <Heading title="Зв'яжіться зі мною" />
       <Grid>
         <InfoWrap>
@@ -150,7 +149,7 @@ function Contact() {
           </ButtomPrimary>
         </Form>
       </Grid>
-    </Container>
+    </>
   );
 }
 

@@ -1,14 +1,17 @@
-import { device } from "assets/styles";
+import { device } from 'assets/styles';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const Container = styled.div`
+const ContainerFullWidth = styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+`;
+
+const Container = styled(ContainerFullWidth)`
+  max-width: 1280px;
   padding-left: 24px;
   padding-right: 24px;
-  max-width: 1280px;
 
   @media ${device.mobileL} {
     padding-left: 16px;
@@ -16,4 +19,4 @@ const Container = styled.div`
   }
 `;
 
-export default Container;
+export default { Container, ContainerFullWidth };

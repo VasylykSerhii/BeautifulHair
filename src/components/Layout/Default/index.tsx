@@ -6,7 +6,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useRedux, useScrollBarDara } from 'hooks';
 
 import Footer from 'components/Footer';
-import { Main } from './styled-components';
+import { Main } from '../styled-components';
 import { selectHooks } from 'store/selects';
 
 interface IProps {

@@ -3,11 +3,11 @@ import { Layout, Services, Wrapper } from 'components';
 
 function ServicesPage(): JSX.Element {
   return (
-    <Layout title="BH | Послуги">
+    <Layout.Default title="BH | Послуги">
       <Wrapper>
         <Services />
       </Wrapper>
-    </Layout>
+    </Layout.Default>
   );
 }
 

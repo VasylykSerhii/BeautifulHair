@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const Buttom = styled.button<{ isBig?: boolean }>`
   transition: ${({ theme }) => theme.trns};
@@ -68,4 +68,22 @@ const ButtomWhile = styled(ButtomPrimary)`
   }
 `;
 
-export default { Buttom, ButtomPrimary, ButtomPrimaryReverse, ButtomWhile };
+const ButtonSmall = styled(ButtomPrimary)`
+  font-weight: 500;
+  border: 2px solid ${({ theme }) => theme.colors.main};
+  font-size: 12px;
+  background-color: ${({ theme }) => theme.colors.main};
+  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 20px;
+  height: 32px;
+
+  &:hover {
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.main};
+  }
+`;
+
+export default { Buttom, ButtomPrimary, ButtomPrimaryReverse, ButtomWhile, ButtonSmall };

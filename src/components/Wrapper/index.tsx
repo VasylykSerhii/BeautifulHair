@@ -1,16 +1,20 @@
+import { Containers } from 'assets/styles';
 import React from 'react';
 import { Wrap } from './styled-components';
 
 interface IProps {
   children: React.ReactNode;
-  light?: boolean;
   forwardedRef?: any;
+  fullWidth?: boolean;
 }
 
-function Wrapper({ children, light, forwardedRef }: IProps): JSX.Element {
+const { ContainerFullWidth, Container } = Containers;
+function Wrapper({ children, fullWidth, forwardedRef }: IProps): JSX.Element {
+  const StyleContainer = fullWidth ? ContainerFullWidth : Container;
+
   return (
-    <Wrap ref={forwardedRef} light={light}>
-      {children}
+    <Wrap ref={forwardedRef}>
+      <StyleContainer>{children}</StyleContainer>
     </Wrap>
   );
 }

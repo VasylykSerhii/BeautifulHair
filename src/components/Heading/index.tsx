@@ -1,6 +1,5 @@
-import { Container } from "assets/styles";
-import React from "react";
-import { Wrapper, Title, Description } from "./styled-components";
+import React from 'react';
+import { Wrapper, Title, Description } from './styled-components';
 
 interface IProps {
   title: string;
@@ -10,12 +9,10 @@ interface IProps {
 
 function Heading({ title, light, desc = null }: IProps): JSX.Element {
   return (
-    <Container>
-      <Wrapper>
-        {title && <Title light={light}>{title}</Title>}
-        {desc && <Description>{desc}</Description>}
-      </Wrapper>
-    </Container>
+    <Wrapper>
+      {title && <Title light={light}>{title}</Title>}
+      {desc && <Description>{desc}</Description>}
+    </Wrapper>
   );
 }
 Heading.defaultProps = {

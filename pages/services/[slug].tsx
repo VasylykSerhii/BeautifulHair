@@ -1,6 +1,6 @@
 import React from 'react';
 import { serviceData } from 'components/Services/data';
-import Layout from 'components/Layout';
+import { Layout } from 'components';
 import { GetServerSideProps } from 'next';
 import { IServiceData } from 'components/Services/interface';
 import ServiceDetail from 'components/ServiceDetail';
@@ -10,9 +10,9 @@ interface IProps {
 }
 export default function ServicesDetail({ data }: IProps): JSX.Element {
   return (
-    <Layout title={`BH | ${data.title}`}>
+    <Layout.Default title={`BH | ${data.title}`}>
       <ServiceDetail data={data} />
-    </Layout>
+    </Layout.Default>
   );
 }
 
