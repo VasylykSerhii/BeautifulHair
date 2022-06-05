@@ -1,24 +1,25 @@
-import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
-import { servicesData } from "components/Services/data";
-import ServicesCard from "components/ServicesCard";
-import Heading from "components/Heading";
-import { getRandomFromArray } from "utils";
-import { Container } from "assets/styles";
-import { Wrapper, Content } from "./styled-components";
+import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
+import { servicesData } from 'components/Services/data';
+import ServicesCard from 'components/ServicesCard';
+import Heading from 'components/Heading';
+import { getRandomFromArray } from 'utils';
+import { Container } from 'assets/styles';
+import { Wrapper, Content } from './styled-components';
 
 function OtherServices(): JSX.Element {
-  const [services, setServices] = useState(servicesData);
+  const [services, setServices] = useState(servicesData.list);
   const { slug } = useRouter().query;
 
   useEffect(() => {
     setServices(
       getRandomFromArray(
-        servicesData.filter((item) => item.slug !== slug),
-        2
-      )
+        servicesData.list.filter((item) => item.slug !== slug),
+        2,
+      ),
     );
   }, [slug]);
+
   return (
     <Wrapper>
       <Heading title="Інші Послуги" />

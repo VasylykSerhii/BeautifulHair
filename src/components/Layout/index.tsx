@@ -1,14 +1,13 @@
-import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Menu from "components/Menu";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { useScrollBarDara } from "hooks";
-import { useSelector } from "react-redux";
-import { IStore } from "redux/store";
-import { IHooksState } from "redux/hooks/reducers";
-import Footer from "components/Footer";
-import { Main } from "./styled-components";
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Menu from 'components/Menu';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useRedux, useScrollBarDara } from 'hooks';
+
+import Footer from 'components/Footer';
+import { Main } from './styled-components';
+import { selectHooks } from 'store/selects';
 
 interface IProps {
   title: string;
@@ -20,10 +19,9 @@ function Default({ title, children, notOffsetTop }: IProps): JSX.Element {
   const router = useRouter();
 
   const url = router && router.pathname;
+  const { select } = useRedux();
   const { setScrollDir, setOffsetTop } = useScrollBarDara();
-  const { isScrollDown } = useSelector<IStore, IHooksState>(
-    (state) => state.hooks
-  );
+  const { isScrollDown } = select(selectHooks);
 
   useScrollPosition(({ prevPos, currPos }) => {
     const isShow = currPos.y < prevPos.y;

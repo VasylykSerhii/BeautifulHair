@@ -1,9 +1,6 @@
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
-import { useDispatch } from "react-redux";
-import {
-  setScrollDirCreation,
-  setOffsetTopCreation,
-} from "redux/hooks/actions-creators";
+import { useState, useEffect, Dispatch, SetStateAction } from 'react';
+import { useDispatch } from 'react-redux';
+import { hooksSlice } from 'store';
 
 interface IProps {
   isScrollDown: boolean;
@@ -17,14 +14,17 @@ function useScrollBarDara(): IProps {
   const [isScrollDown, setScrollDir] = useState(false);
   const [offsetTop, setOffsetTop] = useState(0);
 
+  const { setScrollDown, setOffsetTop: setOffsetTopHook } = hooksSlice.actions;
+
   useEffect(() => {
-    dispatch(setScrollDirCreation(isScrollDown));
+    dispatch(setScrollDown(isScrollDown));
   }, [isScrollDown, dispatch]);
 
   useEffect(() => {
-    dispatch(setOffsetTopCreation(offsetTop));
+    dispatch(setOffsetTopHook(offsetTop));
   }, [offsetTop, dispatch]);
 
   return { isScrollDown, setScrollDir, offsetTop, setOffsetTop };
 }
+
 export default useScrollBarDara;

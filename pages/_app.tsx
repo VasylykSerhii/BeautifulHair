@@ -1,12 +1,11 @@
-import { AppProps } from "next/app";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { Provider } from "react-redux";
-import store from "redux/store";
-import reset from "styled-reset";
+import { AppProps } from 'next/app';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { Provider } from 'react-redux';
+import store from 'store/store';
+import reset from 'styled-reset';
 
-import { themes } from "constants/index";
-import { device } from "assets/styles";
-import axios from "axios";
+import { themes } from 'constants/index';
+import { device } from 'assets/styles';
 
 type Props = {
   theme: typeof themes.defaultTheme;
@@ -81,8 +80,6 @@ const GlobalStyle = createGlobalStyle<Props>`
     line-height: 145%;
   }
 `;
-
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_URL || "";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (

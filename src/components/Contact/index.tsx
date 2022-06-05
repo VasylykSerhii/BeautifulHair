@@ -1,22 +1,15 @@
-import Heading from "components/Heading";
-import React, { useState } from "react";
-import { string, object, SchemaOf } from "yup";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faMapMarkerAlt,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faTelegramPlane,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import Heading from 'components/Heading';
+import React, { useState } from 'react';
+import { string, object, SchemaOf } from 'yup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faTelegramPlane, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-import { Buttons, Container } from "assets/styles";
-import Input from "components/Input";
+import { Buttons, Container } from 'assets/styles';
+import Input from 'components/Input';
 
-import { regEmail, regPhone } from "utils";
-import { sendMail } from "services/mail";
+import { regEmail, regPhone } from 'utils';
+import { sendMail } from 'services/mail';
 import {
   Form,
   Grid,
@@ -26,7 +19,8 @@ import {
   InfoLinksWrap,
   InfoTitle,
   InfoWrap,
-} from "./styled-components";
+  StyledFontAwesomeIcon,
+} from './styled-components';
 
 const { ButtomPrimary } = Buttons;
 
@@ -43,16 +37,9 @@ interface IErrors {
 }
 
 const schema: SchemaOf<IDataMessage> = object().shape({
-  name: string()
-    .required("Поле ім'я обов'язкове")
-    .min(3, "Мінінум 3 символа")
-    .max(30, "Максимум 30 символа"),
-  phone: string()
-    .required("Поле номер телефону обов'язкове")
-    .matches(regPhone, "Номер телфону не вірний"),
-  email: string()
-    .required("Поле електронної пошти обов'язкове")
-    .matches(regEmail, "Електронна пошта не вірна"),
+  name: string().required("Поле ім'я обов'язкове").min(3, 'Мінінум 3 символа').max(30, 'Максимум 30 символа'),
+  phone: string().required("Поле номер телефону обов'язкове").matches(regPhone, 'Номер телфону не вірний'),
+  email: string().required("Поле електронної пошти обов'язкове").matches(regEmail, 'Електронна пошта не вірна'),
   text: string(),
 });
 
@@ -60,11 +47,7 @@ function Contact() {
   const [values, setValues] = useState<IDataMessage>();
   const [errors, setErrors] = useState<IErrors | null>(null);
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setValues((prevState) => {
       return { ...prevState, [name]: value };
@@ -100,32 +83,29 @@ function Contact() {
               href="http://maps.google.com/?q=вул.+Івана+Франка,+Бісковичі,+Львівська+область,+81457"
               target="_blank"
             >
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <StyledFontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
               <InfoDesc>Самбірський р-н., с.Бісковичі</InfoDesc>
             </InfoLink>
           </InfoItem>
           <InfoItem>
             <InfoLink href="mailto:vasylyk97@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <StyledFontAwesomeIcon icon={faEnvelope} fixedWidth />
               <InfoDesc>vasylyk97@gmail.com</InfoDesc>
             </InfoLink>
           </InfoItem>
           <InfoItem>
             <InfoLink href="tel:+380988803187">
-              <FontAwesomeIcon icon={faPhone} />
+              <StyledFontAwesomeIcon icon={faPhone} fixedWidth />
               <InfoDesc>+38 098 88 03 187</InfoDesc>
             </InfoLink>
           </InfoItem>
           <InfoTitle>В мережах:</InfoTitle>
           <InfoLinksWrap>
             <InfoLink href="tg://resolve?domain=masha_bukliv" target="_blank">
-              <FontAwesomeIcon icon={faTelegramPlane} />
+              <StyledFontAwesomeIcon icon={faTelegramPlane} fixedWidth />
             </InfoLink>
-            <InfoLink
-              href="http://instagram.com/_u/vasylyk_marusia/"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
+            <InfoLink href="http://instagram.com/_u/vasylyk_marusia/" target="_blank">
+              <StyledFontAwesomeIcon icon={faInstagram} />
             </InfoLink>
           </InfoLinksWrap>
         </InfoWrap>

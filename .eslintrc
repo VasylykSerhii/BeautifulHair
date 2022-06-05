@@ -27,7 +27,11 @@
       "error",
       {
         "endOfLine": "auto",
-        "semi": true
+        "semi": true,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 2
       }
     ],
     "react/jsx-filename-extension": [

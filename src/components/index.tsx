@@ -1,0 +1,16 @@
+export { default as Layout } from './Layout';
+export { default as About } from './About';
+export { default as Banner } from './Banner';
+export { default as CallToMe } from './CallToMe';
+export { default as Contact } from './Contact';
+export { default as CreatePost } from './CreatePost';
+export { default as Editor } from './Editor';
+export { default as Footer } from './Footer';
+export { default as Heading } from './Heading';
+export { default as InfoImg } from './InfoImg';
+export { default as Input } from './Input';
+export { default as Menu } from './Menu';
+export { default as ServiceDetail } from './ServiceDetail';
+export { default as Services } from './Services';
+export { default as ServicesCard } from './ServicesCard';
+export { default as Wrapper } from './Wrapper';

@@ -1,13 +1,18 @@
-import React from "react";
-import { Wrap } from "./styled-components";
+import React from 'react';
+import { Wrap } from './styled-components';
 
 interface IProps {
   children: React.ReactNode;
   light?: boolean;
+  forwardedRef?: any;
 }
 
-function Wrapper({ children, light }: IProps): JSX.Element {
-  return <Wrap light={light}>{children}</Wrap>;
+function Wrapper({ children, light, forwardedRef }: IProps): JSX.Element {
+  return (
+    <Wrap ref={forwardedRef} light={light}>
+      {children}
+    </Wrap>
+  );
 }
 
 Wrapper.defaultProps = {

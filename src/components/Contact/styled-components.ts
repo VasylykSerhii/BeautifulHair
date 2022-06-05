@@ -1,5 +1,6 @@
-import { device } from "assets/styles";
-import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { device } from 'assets/styles';
+import styled from 'styled-components';
 
 export const Grid = styled.div`
   display: grid;
@@ -45,6 +46,10 @@ export const InfoLink = styled.a`
   display: flex;
   align-items: center;
 
+  svg: {
+    width: 12px;
+  }
+
   &:hover {
     color: ${({ theme }) => theme.colors.main};
   }
@@ -59,3 +64,7 @@ export const InfoLinksWrap = styled.div`
 `;
 
 export const Form = styled.form``;
+
+export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  width: 16px;
+`;
