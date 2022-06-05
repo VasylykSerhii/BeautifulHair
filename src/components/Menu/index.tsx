@@ -4,12 +4,13 @@ import { useSelector } from 'react-redux';
 import { Logo } from 'assets/icons';
 import { useMediaQuery } from 'hooks/useMediaQuery';
 import { IStore } from 'store/store';
-import { Container } from 'assets/styles';
 import { IHooksState } from 'store/hooks/reducers.hooks';
 import MenuDesk from './Desktop';
 import MobileMenu from './Mobile';
 import { MenuPosition, MenuWrap, LinkLogo } from './styled-components';
+import { Containers } from 'assets/styles';
 
+const { Container } = Containers;
 const Menu = (): JSX.Element => {
   const { offsetTop, isScrollDown } = useSelector<IStore, IHooksState>((state) => state.hooks);
 

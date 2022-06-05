@@ -4,7 +4,6 @@ import { servicesData } from 'components/Services/data';
 import ServicesCard from 'components/ServicesCard';
 import Heading from 'components/Heading';
 import { getRandomFromArray } from 'utils';
-import { Container } from 'assets/styles';
 import { Wrapper, Content } from './styled-components';
 
 function OtherServices(): JSX.Element {
@@ -23,13 +22,11 @@ function OtherServices(): JSX.Element {
   return (
     <Wrapper>
       <Heading title="Інші Послуги" />
-      <Container>
-        <Content>
-          {services.map((item) => (
-            <ServicesCard data={item} key={item.title} />
-          ))}
-        </Content>
-      </Container>
+      <Content>
+        {services.map((item) => (
+          <ServicesCard data={item} key={item.title} />
+        ))}
+      </Content>
     </Wrapper>
   );
 }

@@ -1,4 +1,3 @@
-export { default as Layout } from './Layout';
 export { default as About } from './About';
 export { default as Banner } from './Banner';
 export { default as CallToMe } from './CallToMe';
@@ -14,3 +13,5 @@ export { default as ServiceDetail } from './ServiceDetail';
 export { default as Services } from './Services';
 export { default as ServicesCard } from './ServicesCard';
 export { default as Wrapper } from './Wrapper';
+export { default as LoginLayout } from './Layout';
+export { default as Layout } from './Layout';

@@ -1,11 +1,11 @@
-import React from "react";
-import Heading from "components/Heading";
-import { IServiceData } from "components/Services/interface";
-import InfoImg from "components/InfoImg";
-import ServiceBanner from "./components/Banner";
-import NumbersSlider from "./components/NumbersSlider";
-import Wrapper from "../Wrapper";
-import OtherServices from "./components/OtherServices";
+import React from 'react';
+import Heading from 'components/Heading';
+import { IServiceData } from 'components/Services/interface';
+import InfoImg from 'components/InfoImg';
+import ServiceBanner from './components/Banner';
+import NumbersSlider from './components/NumbersSlider';
+import Wrapper from '../Wrapper';
+import OtherServices from './components/OtherServices';
 
 interface IProps {
   data: IServiceData;
@@ -14,15 +14,10 @@ interface IProps {
 function ServiceDetail({ data }: IProps): JSX.Element {
   return (
     <div>
-      <ServiceBanner
-        title={data.title}
-        desc={data.desc}
-        colors={data.colors}
-        image={data.images}
-      />
+      <ServiceBanner title={data.title} desc={data.desc} colors={data.colors} image={data.images} />
 
       {data.infoBlock && (
-        <Wrapper>
+        <Wrapper fullWidth>
           <InfoImg
             title={data.infoBlock.title}
             desc={data.infoBlock.desc}
@@ -33,7 +28,7 @@ function ServiceDetail({ data }: IProps): JSX.Element {
       )}
 
       {data.infoBlockReverse && (
-        <Wrapper light>
+        <Wrapper fullWidth>
           <InfoImg
             title={data.infoBlockReverse.title}
             desc={data.infoBlockReverse.desc}
@@ -43,6 +38,7 @@ function ServiceDetail({ data }: IProps): JSX.Element {
           />
         </Wrapper>
       )}
+
       {data.numbers && (
         <Wrapper>
           <Heading title={data.numbers.title} desc={data.numbers.desc} />
@@ -50,7 +46,7 @@ function ServiceDetail({ data }: IProps): JSX.Element {
         </Wrapper>
       )}
 
-      <Wrapper light>
+      <Wrapper>
         <OtherServices />
       </Wrapper>
     </div>

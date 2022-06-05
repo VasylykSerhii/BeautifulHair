@@ -1,15 +1,6 @@
-import { IInfoBlock } from "components/Services/interface";
-import React from "react";
-import {
-  Wrapper,
-  ImgWrap,
-  Img,
-  Content,
-  Title,
-  Desc,
-  List,
-  ListItem,
-} from "./styled-components";
+import { IInfoBlock } from 'components/Services/interface';
+import React from 'react';
+import { Wrapper, ImgWrap, Img, Content, Title, Desc, List, ListItem } from './styled-components';
 
 interface IProps extends IInfoBlock {
   reverse?: boolean;

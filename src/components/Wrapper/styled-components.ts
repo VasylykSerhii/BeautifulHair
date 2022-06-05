@@ -1,5 +1,5 @@
-import { device } from "assets/styles";
-import styled from "styled-components";
+import { device } from 'assets/styles';
+import styled from 'styled-components';
 
 interface IProps {
   light?: boolean;
@@ -7,8 +7,10 @@ interface IProps {
 
 export const Wrap = styled.div<IProps>`
   padding: 120px 0;
-  background-color: ${({ light, theme }) =>
-    light ? theme.colors.bodyBgLight : "transparent"};
+
+  &:nth-child(even) {
+    background-color: ${({ theme }) => theme.colors.bodyBgLight};
+  }
 
   @media ${device.laptop} {
     padding: 100px 0;
