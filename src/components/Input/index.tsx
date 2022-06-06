@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  InputWrap,
-  Label,
-  InputField,
-  Textarea,
-  InputMaskField,
-} from "./styled-components";
+import React, { useEffect, useState } from 'react';
+import { InputWrap, Label, InputField, Textarea, InputMaskField } from './styled-components';
 
 interface IProps {
   label?: string;
@@ -15,18 +9,15 @@ interface IProps {
   mask?: string;
   error?: string;
   name: string;
-  onChange: (
-    e?:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  onChange: (e?: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onBlur?: (e?: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 const typeInput = (type, props) => {
   switch (type) {
-    case "textarea":
+    case 'textarea':
       return <Textarea {...props} />;
-    case "mask-input":
+    case 'mask-input':
       return <InputMaskField {...props} />;
     default:
       return <InputField {...props} />;
@@ -39,7 +30,7 @@ const InputSelect = ({ type, ...rest }: IProps) => {
   useEffect(() => {
     setComponent(typeInput(type, rest));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rest.error]);
+  }, [rest.error, rest.value]);
 
   return <>{Component}</>;
 };
@@ -47,17 +38,13 @@ const InputSelect = ({ type, ...rest }: IProps) => {
 function Input({ label, type, value, error, onChange, ...rest }: IProps) {
   return (
     <InputWrap>
-      <Label htmlFor={label}>{label}</Label>
-      <InputSelect
-        {...rest}
-        value={value}
-        error={error}
-        onChange={onChange}
-        type={type}
-      />
-      <Label htmlFor={label} error={error}>
-        {error}
-      </Label>
+      {label && <Label htmlFor={label}>{label}</Label>}
+      <InputSelect {...rest} value={value} error={error} onChange={onChange} type={type} />
+      {error && (
+        <Label htmlFor={label} error={error}>
+          {error}
+        </Label>
+      )}
     </InputWrap>
   );
 }

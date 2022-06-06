@@ -3,9 +3,10 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Provider } from 'react-redux';
 import store from 'store/store';
 import reset from 'styled-reset';
-
 import { themes } from 'constants/index';
 import { device } from 'assets/styles';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from 'config/index';
 
 type Props = {
   theme: typeof themes.defaultTheme;
@@ -80,6 +81,8 @@ const GlobalStyle = createGlobalStyle<Props>`
     line-height: 145%;
   }
 `;
+
+initializeApp(firebaseConfig);
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
