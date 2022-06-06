@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { Main } from '../styled-components';
+import { LeftSide, LoginMain, RightSide } from '../styled-components';
 
 interface IProps {
   title: string;
@@ -22,7 +22,10 @@ function LoginLayout({ title, children }: IProps): JSX.Element {
         <link rel="icon" href="/favicon.png" />=
       </Head>
 
-      <Main notOffsetTop>{children}</Main>
+      <LoginMain notOffsetTop>
+        <RightSide />
+        <LeftSide>{children}</LeftSide>
+      </LoginMain>
     </div>
   );
 }
