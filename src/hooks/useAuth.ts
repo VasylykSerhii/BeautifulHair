@@ -1,6 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
 import { useRedux } from 'hooks';
-// import { authAsync, setError } from '../redux';
+import { authAsync, setUser } from 'store';
 
 export const useAuth = () => {
   const { dispatch } = useRedux();
@@ -13,11 +13,7 @@ export const useAuth = () => {
       if (!currentUserToken) return;
       console.log(currentUserToken, currentUserToken.token);
 
-      // dispatch(
-      //   authAsync({
-      //     idToken: currentUser.token,
-      //   }),
-      // );
+      // dispatch(authAsync({ ...user, isAuth: true }));
     } catch (error: any) {
       // dispatch(setError(error?.code));
     }
@@ -33,12 +29,12 @@ export const useAuth = () => {
       const currentUserToken = await auth.currentUser?.getIdTokenResult();
 
       if (!currentUserToken) return;
-      console.log(currentUserToken, currentUserToken.token);
-      // dispatch(
-      //   authAsync({
-      //     idToken: currentUserToken.token,
-      //   }),
-      // );
+
+      dispatch(
+        authAsync({
+          idToken: currentUserToken.token,
+        }),
+      );
     } catch (error: any) {
       // dispatch(setError(error.code));
     }
