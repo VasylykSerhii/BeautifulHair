@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import HooksSlice from './hooks/reducers.hooks';
+import { auth, hooks } from 'store';
 
 const reducers = combineReducers({
-  hooks: HooksSlice.reducer,
+  auth,
+  hooks,
 });
 
 export default reducers;

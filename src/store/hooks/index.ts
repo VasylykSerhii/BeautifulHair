@@ -1,1 +1,3 @@
-export { default as hooksSlice } from './reducers.hooks';
+export * from './reducers.hooks';
+
+export { default as hooks } from './reducers.hooks';

@@ -34,4 +34,4 @@ const HooksSlice = createSlice({
 
 export const hooksActionst = HooksSlice.actions;
 
-export default HooksSlice;
+export default HooksSlice.reducer;

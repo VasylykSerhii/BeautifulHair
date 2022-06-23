@@ -1,3 +1,4 @@
 export * from './actions.auth';
 export * from './reducers.auth';
-export * from './selects.auth';
+
+export { default as auth } from './reducers.auth';
