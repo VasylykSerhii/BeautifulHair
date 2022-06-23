@@ -2,7 +2,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPasswor
 import { useRedux } from 'hooks';
 import { authAsync, setUser } from 'store';
 
-export const useAuth = () => {
+const useAuth = () => {
   const { dispatch } = useRedux();
 
   const authEmail = async ({ login, password }: { [key: string]: string }) => {
@@ -42,3 +42,5 @@ export const useAuth = () => {
 
   return { authGoogle, authEmail };
 };
+
+export default useAuth;
