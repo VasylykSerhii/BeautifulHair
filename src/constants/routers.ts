@@ -1,9 +1,9 @@
 const routers = {
-  LOGIN: 'login',
+  LOGIN: '/login',
 
   HOME: '/',
   ABOUT_ME: '#', //about-me
-  SERVICES: 'services',
+  SERVICES: '/services',
   MY_WORKS: '#', //my-works
 };
 
